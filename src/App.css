@@ -1,0 +1,137 @@
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide {
+  animation: slide 0.5s ease-in-out;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  padding-left: 3rem;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 50%;
+  position: relative;
+}
+
+.main-image {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 1%;
+  left: -11%;
+  width: 50%;
+  z-index: 9999;
+}
+
+.overlay img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.controls {
+  position: absolute;
+  top: 28rem;
+  left: 5rem;
+  display: flex;
+ justify-content: flex-end;
+ gap: 0.5rem;
+ margin-right: 3rem;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.controls button {
+  position: relative;
+  left: -8rem;
+  padding: 16px 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #555;
+}
+
+.indicator {
+  position: relative;
+  top: 2rem;
+  left: -6rem;
+  width: 80%;
+  height: 4px;
+  background-color: #ccc;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.progress-line {
+  position: absolute;
+  height: 100%;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.slide:hover .overlay {
+  opacity: 1;
+  transform: translateY(-15%);
+}
+.text-overlay {
+  
+  width: 100%;
+}
+
+.text-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.tyre-name {
+  font-size: 1rem;
+  color: #ddd;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+  .main-image {
+    height: 50vh;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .indicator {
+    width: 90%;
+  }
+}
+
