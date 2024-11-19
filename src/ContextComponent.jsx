@@ -1,4 +1,5 @@
 // @ts-nocheck
+// eslint-disable-next-line no-unused-vars
 import React, { createContext, useContext, useState } from "react";
 import { BsCloudSun } from "react-icons/bs";
 import { PiMedalLight } from "react-icons/pi";
@@ -39,6 +40,7 @@ import  CB1505  from "./assets/images__2_-removebg-preview.png";
 const ThemeContext = createContext("");
 
 // Create a provider component
+// eslint-disable-next-line react/prop-types
 function ThemeProvider({ children }) {
   const data = {
     Cd70: [
@@ -2152,7 +2154,7 @@ function ThemeProvider({ children }) {
     ],
     CB150: [
       {
-        image: CB1251,
+        image: CB1501,
         name: "CB150 Sport Racer",
         price: 3200,
         size: "3.00-18",
@@ -2210,7 +2212,7 @@ function ThemeProvider({ children }) {
         },
       },
       {
-        image: CB1252,
+        image: CB1502,
         name: "CB150 Touring Pro",
         price: 3400,
         size: "2.75-18",
@@ -2271,7 +2273,7 @@ function ThemeProvider({ children }) {
         },
       },
       {
-        image: CB1253,
+        image: CB1503,
         name: "CB150 Urban Grip",
         price: 2800,
         size: "2.50-17",
@@ -2329,7 +2331,7 @@ function ThemeProvider({ children }) {
         },
       },
       {
-        image: CB1254,
+        image: CB1504,
         name: "CB150 All-Terrain Master",
         price: 3600,
         size: "3.25-18",
@@ -2388,7 +2390,7 @@ function ThemeProvider({ children }) {
         },
       },
       {
-        image: CB1254,
+        image: CB1505,
         name: "CB150 EcoDrive",
         price: 2500,
         size: "2.75-17",
@@ -2504,14 +2506,45 @@ function ThemeProvider({ children }) {
       },
     ],
   };
-  const [Dataset,setDataset] = useState(data);
+
+
+  const [Dataset, setDataset] = useState(data);
+  const [cartItems, setCartItems] = useState([]);
+  const [CartDisplay, setCartDisplay] = useState(false);
+
+  const handleCartToggle = () => {
+    setCartDisplay(true);
+  };
+
+  const handleCloseCartToggle = () => {
+    setCartDisplay(false);
+  };
+
+  const addToCart = (product) => {
+    setCartItems((prevCartItems) => [...prevCartItems, product]);
+  };
+
+  const removeFromCart = (index) => {
+    setCartItems((prevCartItems) => prevCartItems.filter((_, i) => i !== index));
+  };
+  
 
   return (
-    <ThemeContext.Provider value={{ Dataset,setDataset }}>
+    <ThemeContext.Provider
+      value={{
+        CartDisplay,
+        cartItems,
+        Dataset,
+        setDataset,
+        handleCartToggle,
+        handleCloseCartToggle,
+        addToCart,
+        removeFromCart,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
-// Export the context and provider
 export { ThemeContext, ThemeProvider };

@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-// @ts-ignore
 import Logo from "../assets/Logo-transformed.webp";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
+import { ThemeContext } from "../ContextComponent";
+import Cart from "../Components/Product/Cart";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -17,6 +19,7 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cartItems,CartDisplay, handleCartToggle } = useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +32,7 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-30 transition-colors duration-300 ${
         scrolled ? "bg-black text-white" : "bg-transparent text-gray-900"
       }`}
     >
@@ -68,17 +71,15 @@ export default function Navigation() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6">
-          <Link to="/Shopping Cart" className="relative text-sm font-semibold">
-            <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-            <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-              3
-            </span>
-          </Link>
-          <Link to="/login" className="text-sm font-semibold">
+        <div onClick={handleCartToggle} className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 relative left-[-25px] cursor-pointer">
+          <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+          <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+            {cartItems.length}
+          </span>
+        </div>
+        <Link to="/login" className="text-sm font-semibold">
             Log in <span aria-hidden="true">&rarr;</span>
           </Link>
-        </div>
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -115,13 +116,13 @@ export default function Navigation() {
                 ))}
               </div>
               <div className="py-6">
-                <Link
-                  to="/cart"
-                  className="-mx-3 flex items-center gap-2 rounded-lg px-3 py-2.5 text-base font-semibold hover:bg-gray-50"
+                <div
+                  onClick={handleCartToggle}
+                  className="-mx-3 flex items-center gap-2 rounded-lg px-3 py-2.5 text-base font-semibold hover:bg-gray-50 cursor-pointer"
                 >
                   <ShoppingCartIcon className="h-5 w-5" aria-hidden="true" />
                   Cart
-                </Link>
+                </div>
                 <Link
                   to="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold hover:bg-gray-50"
@@ -133,6 +134,7 @@ export default function Navigation() {
           </div>
         </DialogPanel>
       </Dialog>
+      {CartDisplay && <Cart/>}
     </header>
   );
 }
