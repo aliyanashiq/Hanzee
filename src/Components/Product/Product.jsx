@@ -2,16 +2,57 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../ContextComponent";
 import { FaOpencart } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import './Button.css';
+import { Link, useNavigate } from "react-router-dom";
+import "./Button.css";
 
 function Product() {
   const { Dataset } = useContext(ThemeContext);
   const [selectedCategory, setSelectedCategory] = useState("Cd70");
   const { addToCart } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+  };
+
+  const handleLearnMore = (product) => {
+    const productData = {
+      id: product.id,
+      image: product.image,
+      description: product.description,
+      name: product.name,
+      price: product.price,
+      category: selectedCategory,
+      qualityPoints: Object.keys(product.qualityPoints).reduce((acc, key) => {
+        acc[key] = {
+          label: product.qualityPoints[key].label,
+          // Ensure the icon is serializable, e.g., by converting it to a string if it's a React element
+        };
+        return acc;
+      }, {}),
+      specification: Object.keys(product.specification).reduce((acc, key) => {
+        acc[key] = {
+          topic: product.specification[key].topic,
+          parag: product.specification[key].parag,
+        };
+        return acc;
+      }, {}),
+      tireFeature: Object.keys(product.tireFeature).reduce((acc, key) => {
+        acc[key] = {
+          topic: product.tireFeature[key].topic,
+          parag: product.tireFeature[key].parag,
+        };
+        return acc;
+      }, {}),
+      WarrantiesGuarantees: Object.keys(product.WarrantiesGuarantees).reduce((acc, key) => {
+        acc[key] = {
+          topic: product.WarrantiesGuarantees[key].topic,
+          parag: product.WarrantiesGuarantees[key].para,
+        };
+        return acc;
+      }, {}),
+    };
+    navigate("/Feature", { state: { product: productData } });
   };
 
   return (
@@ -27,7 +68,7 @@ function Product() {
         <div className="flex flex-wrap justify-center space-x-8 md:space-x-6">
           {Object.keys(Dataset).map((category) => (
             <button
-              key={category} // Ensure unique key for each category button
+              key={category}
               onClick={() => handleCategoryChange(category)}
               className="relative px-4 py-2 font-medium transition-all duration-300 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-yellow-400 hover:after:w-full after:transition-all after:duration-300"
             >
@@ -40,10 +81,9 @@ function Product() {
       <div className="product-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
         {Dataset[selectedCategory]?.map((product, index) => (
           <div
-            key={product.id || index} // Ensure unique key for each product
+            key={product.id || index}
             className="group relative lg:h-[70vh] bg-white shadow-lg rounded-lg overflow-hidden items-start transition hover:shadow-2xl"
           >
-            {/* Product Image */}
             <img
               alt={product.name}
               src={product.image}
@@ -53,7 +93,7 @@ function Product() {
               <ul className="space-y-2">
                 {Object.keys(product.qualityPoints).map((key, idx) => (
                   <li
-                    key={`${product.id}-${key}-${idx}`} // Ensure unique key for qualityPoints
+                    key={`${product.id}-${key}-${idx}`}
                     className="flex items-center space-x-2 bg-gray-200 p-2 w-[20rem] rounded-[5rem]"
                   >
                     <span className="text-blue-500">
@@ -67,9 +107,7 @@ function Product() {
               </ul>
             </div>
 
-            {/* Product Details */}
             <div className="p-4 lg:w-ful flex flex-col justify-between pt-12">
-              {/* Name and Brand */}
               <div className="flex justify-between">
                 <h2 className="text-lg font-semibold text-gray-800">
                   {product.name}
@@ -77,7 +115,6 @@ function Product() {
                 <p className="text-sm text-gray-500">Brand: {product.brand}</p>
               </div>
 
-              {/* Price and Size */}
               <div className="mt-4 flex justify-between">
                 <p className="text-sm text-gray-500">Size: {product.size}</p>
                 <p className="text-lg font-bold text-gray-800">
@@ -101,7 +138,10 @@ function Product() {
                   </p>
                 </button>
 
-                <button className="learn-more">
+                <button
+                  className="learn-more"
+                  onClick={() => handleLearnMore(product)}
+                >
                   <span className="circle" aria-hidden="true">
                     <span className="icon arrow"></span>
                   </span>

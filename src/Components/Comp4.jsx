@@ -19,10 +19,11 @@ import Image17 from "../assets/images__1_-removebg-preview.png";
 import Image18 from "../assets/images__10_-removebg-preview.png";
 // @ts-ignore
 import Image19 from "../assets/Tire-transformed.webp";
+import { useNavigate } from "react-router-dom";
 
 function Comp4() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const navigated=useNavigate();
   const imageData = [
     {
       id: 1,
@@ -64,6 +65,10 @@ function Comp4() {
     );
   };
 
+  const Handelshop =()=>{
+    navigated('/Product');
+  }
+
   return (
     <div className="flex h-screen w-full p-5 bg-stone-800 text-white">
       <div className="w-1/3 p-5 flex flex-col justify-center relative">
@@ -71,7 +76,7 @@ function Comp4() {
         <h2 className="text-5xl mt-4">
           Tires for the <br /> places you’ll go.
         </h2>
-        <button className="bg-black text-white w-[30%] mt-10 px-1 py-2 rounded">
+        <button onClick={Handelshop} className="bg-black text-white w-[30%] mt-10 px-1 py-2 rounded">
           SHOP NOW
         </button>
       </div>
@@ -101,9 +106,7 @@ function Comp4() {
                     <h2 className="text-heading z-30">{item.TextHeading}</h2>
                     <p className="tyre-name">{item.tyreName}</p>
                   </div>
-                  <button className="flex items-center relative left-10 text-white mt-4">
-                    View Tire Line <RiArrowRightUpLine className="ml-2" />
-                  </button>
+                  
                 </div>
               </div>
             ))}

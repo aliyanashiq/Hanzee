@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react'
 import Lo1 from "../assets/pexels-entero-17900722.jpg"; 
+import { Link } from 'react-router-dom';
 function Comp2() {
   return (
     <div className="relative h-screen isolate px-6 pt-14 lg:px-8">
@@ -15,12 +16,12 @@ function Comp2() {
             Get up to $100 back via online or mail in rebate when you purchase and install select sets of 4 Goodyear tires. Plus, get an additional $100 more when you use the Goodyear Credit Card by online or mail-in rebate. Offer expires 12/31/24. Offer Details
             </p>
             <div className="mt-10 flex items-center  gap-x-6">
-              <a
-                href="#"
+              <Link
+                to='/Product'
                 className="rounded-3xl bg-indigo-600 px-3.5 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Find Tire
-              </a>
+              </Link>
               <a href="#" className="text-sm/6 font-semibold text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </a>

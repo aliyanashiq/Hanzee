@@ -1,19 +1,39 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ThemeContext } from "../../ContextComponent";
 
 export default function Cart() {
-  const { cartItems, removeFromCart, handleCloseCartToggle } =
-    useContext(ThemeContext);
+  const { cartItems, removeFromCart, handleCloseCartToggle } = useContext(ThemeContext);
+
+  // Use a state to track quantity changes for each product
+  const [quantities, setQuantities] = useState(
+    cartItems.reduce((acc, product, index) => {
+      acc[index] = 1; // Default to 1 quantity
+      return acc;
+    }, {})
+  );
+
+  // Function to update quantity
+  const updateQuantity = (index, newQuantity) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [index]: newQuantity,
+    }));
+  };
+
+  // Total price calculation
+  const calculateTotal = () => {
+    return cartItems
+      .reduce(
+        (total, item, index) => total + item.price * quantities[index], 0
+      )
+      .toFixed(2);
+  };
 
   return (
-    <Dialog
-      open={true}
-      onClose={handleCloseCartToggle}
-      className="relative z-30"
-    >
+    <Dialog open={true} onClose={handleCloseCartToggle} className="relative z-30">
       {/* Modal Overlay */}
       <div className="fixed inset-0 bg-gray-500/75 z-30" aria-hidden="true" />
 
@@ -26,12 +46,13 @@ export default function Cart() {
               <XMarkIcon className="h-6 w-6 text-gray-500" />
             </button>
           </div>
+
           <ul role="list" className="-my-6 divide-y divide-gray-200 mt-4">
             {cartItems.length > 0 ? (
-              cartItems.map((product,index) => (
+              cartItems.map((product, index) => (
                 <li key={index} className="flex py-6">
                   {/* Product Image */}
-                  <div className="h-24 w-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
+                  <div className="h-24 w-24 shrink-0 overflow-hidden rounded-md">
                     <img
                       alt={product.name}
                       src={product.image}
@@ -46,16 +67,37 @@ export default function Cart() {
                         <h3>
                           <a href={product.href}>{product.name}</a>
                         </h3>
-                        <p className="ml-4">${product.price}</p>
+                        <p className="ml-4">
+                          ${(product.price * (quantities[index] || 1)).toFixed(2)}
+                        </p>
                       </div>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {product.color}
-                      </p>
+                      <p className="text-sm text-gray-500">Brand: {product.brand}</p>
                     </div>
 
                     {/* Quantity and Actions */}
                     <div className="flex flex-1 items-end justify-between text-sm">
-                      <p className="text-gray-500">Qty {product.quantity}</p>
+                      <div className="flex items-center space-x-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updateQuantity(index, quantities[index] - 1)
+                          }
+                          disabled={quantities[index] <= 1} // Disable decrease if quantity is 1
+                          className="h-8 w-8 flex justify-center items-center rounded border border-gray-300 text-gray-500 hover:text-gray-700 disabled:opacity-50"
+                        >
+                          -
+                        </button>
+                        <p className="text-gray-500">{quantities[index]}</p>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            updateQuantity(index, quantities[index] + 1)
+                          }
+                          className="h-8 w-8 flex justify-center items-center rounded border border-gray-300 text-gray-500 hover:text-gray-700"
+                        >
+                          +
+                        </button>
+                      </div>
                       <div className="flex">
                         <button
                           type="button"
@@ -76,14 +118,10 @@ export default function Cart() {
             )}
           </ul>
 
+          {/* Total Price */}
           <div className="mt-6 flex justify-between">
             <span className="text-lg font-medium">Total:</span>
-            <span className="text-lg font-medium">
-              $
-              {cartItems
-                .reduce((total, item) => total + item.price, 0)
-                .toFixed(2)}
-            </span>
+            <span className="text-lg font-medium">${calculateTotal()}</span>
           </div>
         </div>
       </div>
