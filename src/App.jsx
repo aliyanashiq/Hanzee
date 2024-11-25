@@ -6,7 +6,8 @@ import Comp6 from "./Components/Comp6";
 import Firstpage from "./Firstpage";
 import { ThemeProvider } from "./ContextComponent";
 import Product1 from "./Components/Product/Product1";
-import Features from "./Components/Product/Features";
+import Feature from "./Components/Product/Feature";
+import About from "./Components/Product/About";
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Firstpage />} />
           <Route path="/Product" element={<Product1 />} />
-          <Route path="/Feature" element={<Features />} />
+          <Route path="/Feature" element={<Feature />} />
+          <Route path="/About" element={<About />} />
         </Routes>
         
         <Comp6 />

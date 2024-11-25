@@ -13,8 +13,8 @@ import Cart from "../Components/Product/Cart";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/Product" },
-  { name: "Feature", href: "#" },
-  { name: "About", href: "#" },
+  { name: "Feature", href: "/Feature" },
+  { name: "About", href: "/About" },
 ];
 
 export default function Navigation() {
