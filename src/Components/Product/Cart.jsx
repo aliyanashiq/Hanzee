@@ -1,11 +1,14 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useContext, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ThemeContext } from "../../ContextComponent";
+import { useNavigate } from "react-router-dom";
+import "./About.css";
 
 export default function Cart() {
-  const { cartItems, removeFromCart, handleCloseCartToggle } = useContext(ThemeContext);
+  const { cartItems, removeFromCart, handleCloseCartToggle } =
+    useContext(ThemeContext);
+  const navigate = useNavigate();
 
   // Use a state to track quantity changes for each product
   const [quantities, setQuantities] = useState(
@@ -19,7 +22,7 @@ export default function Cart() {
   const updateQuantity = (index, newQuantity) => {
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [index]: newQuantity,
+      [index]: Math.max(newQuantity, 1), // Ensure the quantity is at least 1
     }));
   };
 
@@ -27,9 +30,28 @@ export default function Cart() {
   const calculateTotal = () => {
     return cartItems
       .reduce(
-        (total, item, index) => total + item.price * quantities[index], 0
+        (total, item, index) => total + item.price * (quantities[index] || 1),
+        0
       )
       .toFixed(2);
+  };
+
+  // Handle Checkout
+  const handleCheckout = () => {
+    const total = calculateTotal();
+
+    // Create a simplified version of cart items (only serializable data)
+    const serializedCartItems = cartItems.map((item, index) => ({
+      
+      name: item.name,
+      price: item.price,
+      quantity: quantities[index] || 1,
+    }));
+
+    // Pass only serializable data to the state
+    navigate("/CheckOut", {
+      state: { cartItems: serializedCartItems, total },
+    });
   };
 
   return (
@@ -47,7 +69,10 @@ export default function Cart() {
             </button>
           </div>
 
-          <ul role="list" className="-my-6 divide-y divide-gray-200 mt-4">
+          <ul
+            role="list"
+            className="custom-scrollbar -my-6 divide-y h-[25rem] overflow-y-scroll divide-gray-200 mt-4"
+          >
             {cartItems.length > 0 ? (
               cartItems.map((product, index) => (
                 <li key={index} className="flex py-6">
@@ -68,10 +93,12 @@ export default function Cart() {
                           <a href={product.href}>{product.name}</a>
                         </h3>
                         <p className="ml-4">
-                          ${(product.price * (quantities[index] || 1)).toFixed(2)}
+                          $ {(product.price * (quantities[index] || 1)).toFixed(2)}
                         </p>
                       </div>
-                      <p className="text-sm text-gray-500">Brand: {product.brand}</p>
+                      <p className="text-sm text-gray-500">
+                        Brand: {product.brand}
+                      </p>
                     </div>
 
                     {/* Quantity and Actions */}
@@ -123,6 +150,14 @@ export default function Cart() {
             <span className="text-lg font-medium">Total:</span>
             <span className="text-lg font-medium">${calculateTotal()}</span>
           </div>
+
+          {/* Checkout Button */}
+          <button
+            onClick={handleCheckout}
+            className="mt-4 w-full px-4 py-2 text-center bg-indigo-600 text-white rounded hover:bg-indigo-500"
+          >
+            Checkout
+          </button>
         </div>
       </div>
     </Dialog>

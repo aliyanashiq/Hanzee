@@ -52,7 +52,7 @@ function Product() {
         return acc;
       }, {}),
     };
-    navigate("/Feature", { state: { product: productData } });
+    navigate("/LearnMore", { state: { product: productData } });
   };
 
   return (

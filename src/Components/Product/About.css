@@ -1,0 +1,32 @@
+.aboutimage{
+    background-image: url(../../assets/pexels-venkatganta-17944591.jpg);
+    background-clip: border-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100%;
+}
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #e5e7eb; /* Light gray */
+      border-radius: 8px;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #6b7280; /* Gray */
+      border-radius: 8px;
+      border: 2px solid transparent; /* Padding around thumb */
+      background-clip: content-box;
+    }
+  
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #4b5563; /* Darker gray on hover */
+    }
+  
+  

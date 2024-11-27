@@ -3,7 +3,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Add `useLocation` for conditional rendering
 import Logo from "../assets/Logo-transformed.webp";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
@@ -19,8 +19,9 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { cartItems,CartDisplay, handleCartToggle } = useContext(ThemeContext);
+  const { cartItems, CartDisplay, handleCartToggle } = useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation(); // Hook to check current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +30,13 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Exclude the header on the login route
+  const isLoginPage = location.pathname === "/login";
+
+  if (isLoginPage) {
+    return null; // Don't render the navigation header on the login page
+  }
 
   return (
     <header
@@ -60,7 +68,7 @@ export default function Navigation() {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:flex-1 lg:gap-x-12">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -71,15 +79,17 @@ export default function Navigation() {
             </Link>
           ))}
         </div>
-        <div onClick={handleCartToggle} className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 relative left-[-25px] cursor-pointer">
-          <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-          <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-            {cartItems.length}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-6 relative left-[-25px] cursor-pointer">
+          <span onClick={handleCartToggle}>
+            <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+            <span className="absolute -top-2 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
+              {cartItems.length}
+            </span>
           </span>
         </div>
         <Link to="/login" className="text-sm font-semibold">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
+          Log in <span aria-hidden="true">&rarr;</span>
+        </Link>
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -134,7 +144,7 @@ export default function Navigation() {
           </div>
         </DialogPanel>
       </Dialog>
-      {CartDisplay && <Cart/>}
+      {CartDisplay && <Cart />}
     </header>
   );
 }

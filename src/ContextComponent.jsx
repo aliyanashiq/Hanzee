@@ -8,34 +8,32 @@ import { FaCar } from "react-icons/fa";
 import { GiFlyingFlag } from "react-icons/gi";
 import { IoCarSportOutline } from "react-icons/io5";
 
-import  CD1  from "./assets/Cd2.png";
-import  CD2  from "./assets/cd3.png";
-import  CD3  from "./assets/cd4.png";
-import  CD4  from "./assets/Tire-transformed.webp";
+import CD1 from "./assets/Cd2.png";
+import CD2 from "./assets/cd3.png";
+import CD3 from "./assets/cd4.png";
+import CD4 from "./assets/Tire-transformed.webp";
 
-import  Prider1  from "./assets/prider1.png";
-import  Prider2  from "./assets/images__3_-removebg-preview.png";
-import  Prider3  from "./assets/images__1_-removebg-preview.png";
-import  Prider4  from "./assets/download-removebg-preview.png";
+import Prider1 from "./assets/prider1.png";
+import Prider2 from "./assets/images__3_-removebg-preview.png";
+import Prider3 from "./assets/images__1_-removebg-preview.png";
+import Prider4 from "./assets/download-removebg-preview.png";
 
-import  CG1251  from "./assets/125(2).png";
-import  CG1252 from "./assets/1253.png";
-import  CG1253  from "./assets/1254.png";
-import  CG1254  from "./assets/1256.png";
-import  CG1255  from "./assets/CB1251.png";
+import CG1251 from "./assets/125(2).png";
+import CG1252 from "./assets/1253.png";
+import CG1253 from "./assets/1254.png";
+import CG1254 from "./assets/1256.png";
+import CG1255 from "./assets/CB1251.png";
 
+import CB1251 from "./assets/CB1251.png";
+import CB1252 from "./assets/CB1251.png";
+import CB1253 from "./assets/CB1251.png";
+import CB1254 from "./assets/CB1251.png";
 
-import  CB1251  from "./assets/CB1251.png";
-import  CB1252  from "./assets/CB1251.png";
-import  CB1253  from "./assets/CB1251.png";
-import  CB1254  from "./assets/CB1251.png";
-
-
-import  CB1501  from "./assets/CB1251.png";
-import  CB1502  from "./assets/CB150(1).png";
-import  CB1503  from "./assets/images-removebg-preview.png";
-import  CB1504  from "./assets/images__6_-removebg-preview.png";
-import  CB1505  from "./assets/images__2_-removebg-preview.png";
+import CB1501 from "./assets/CB1251.png";
+import CB1502 from "./assets/CB150(1).png";
+import CB1503 from "./assets/images-removebg-preview.png";
+import CB1504 from "./assets/images__6_-removebg-preview.png";
+import CB1505 from "./assets/images__2_-removebg-preview.png";
 // Create a Context
 const ThemeContext = createContext("");
 
@@ -45,7 +43,7 @@ function ThemeProvider({ children }) {
   const data = {
     Cd70: [
       {
-        image: CD1 ,
+        image: CD1,
         name: "CD70 Heavy-Duty",
         price: 2300,
         size: "2.25-17",
@@ -70,7 +68,6 @@ function ThemeProvider({ children }) {
             label: "Commuter",
             icon: <FaCar />,
           },
-          
         },
         warranty: {
           w1: {
@@ -110,16 +107,42 @@ function ThemeProvider({ children }) {
           s14: { topic: "Tread Pattern", parag: "All Season" },
         },
         tireFeature: {
-          s1: { topic: "Superior All-Season Grip", parag: "Engineered for reliable performance in a variety of weather conditions." },
-          s2: { topic: "Quiet and Comfortable Ride", parag: "Special tread pattern reduces noise for a quieter drive." },
-          s3: { topic: "Durable and Long-Lasting", parag: "Advanced compounds ensure longer life for your tires." },
-          s4: { topic: "Fuel Efficiency Optimization", parag: "Designed to lower rolling resistance, saving fuel." },
-          s5: { topic: "Sustainability Focused", parag: "Constructed with eco-friendly materials like soybean oil." },
+          s1: {
+            topic: "Superior All-Season Grip",
+            parag:
+              "Engineered for reliable performance in a variety of weather conditions.",
+          },
+          s2: {
+            topic: "Quiet and Comfortable Ride",
+            parag: "Special tread pattern reduces noise for a quieter drive.",
+          },
+          s3: {
+            topic: "Durable and Long-Lasting",
+            parag: "Advanced compounds ensure longer life for your tires.",
+          },
+          s4: {
+            topic: "Fuel Efficiency Optimization",
+            parag: "Designed to lower rolling resistance, saving fuel.",
+          },
+          s5: {
+            topic: "Sustainability Focused",
+            parag: "Constructed with eco-friendly materials like soybean oil.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Tire Rotation and Balancing", para: "Enjoy free rotation and balancing for the life of your tires." },
-          p2: { topic: "Highway Auto and Light Truck Tire Replacement Limited Warranty", para: "Includes noise and roughness protection. Exclusions apply." },
-          p3: { topic: "Limited Tread Life Warranty", para: "Covers 50,000 mi./80,000 km for treadwear issues. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Tire Rotation and Balancing",
+            para: "Enjoy free rotation and balancing for the life of your tires.",
+          },
+          p2: {
+            topic:
+              "Highway Auto and Light Truck Tire Replacement Limited Warranty",
+            para: "Includes noise and roughness protection. Exclusions apply.",
+          },
+          p3: {
+            topic: "Limited Tread Life Warranty",
+            para: "Covers 50,000 mi./80,000 km for treadwear issues. Exclusions apply.",
+          },
         },
       },
       {
@@ -148,7 +171,6 @@ function ThemeProvider({ children }) {
             label: "Sport Performance",
             icon: <GiFlyingFlag />,
           },
-          
         },
         warranty: {
           w1: {
@@ -165,16 +187,46 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Cruise Quietly", parag: "The SoundComfort Technology® foam helps keep the noises of the road out of the car." },
-          s2: { topic: "Made with Sustainability in Mind", parag: "Constructed, in part, with soybean oil and other sustainable raw materials."},
-          s3: { topic: "Made for Comfort and Performance", parag: "Designed with a high-quality, high-performance rubber compound." },
-          s4: { topic: "Get More Miles than the Predecessor", parag: "A long-lasting tread designed to help you get more miles out of your tires." },
-          s5: { topic: "Made for Comfort and Performance", parag: "Designed with a high-quality, high-performance rubber compound." },
+          s1: {
+            topic: "Cruise Quietly",
+            parag:
+              "The SoundComfort Technology® foam helps keep the noises of the road out of the car.",
+          },
+          s2: {
+            topic: "Made with Sustainability in Mind",
+            parag:
+              "Constructed, in part, with soybean oil and other sustainable raw materials.",
+          },
+          s3: {
+            topic: "Made for Comfort and Performance",
+            parag:
+              "Designed with a high-quality, high-performance rubber compound.",
+          },
+          s4: {
+            topic: "Get More Miles than the Predecessor",
+            parag:
+              "A long-lasting tread designed to help you get more miles out of your tires.",
+          },
+          s5: {
+            topic: "Made for Comfort and Performance",
+            parag:
+              "Designed with a high-quality, high-performance rubber compound.",
+          },
         },
-        WarrantiesGuarantees:{
-          p1:{topic:"Limited Tread Life Warranty" ,para:"We know you want to get the most out of your tires. That’s why we confidently back this tire with a warranty that helps protect you in the case of premature treadwear.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details."},
-          p2:{topic:"Goodyear 60-Day Satisfaction Guarantee" ,para:"We know you want to get the most out of your tires. That’s why we confidently back this tire with a warranty that helps protect you in the case of premature treadwear.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details."},
-          p3:{topic:"Highway Auto and Light Truck Tire Replacement Limited Warranty" ,para:"Eligible for Replacement Limited Warranty, including noise and roughness protection.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details."},
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Limited Tread Life Warranty",
+            para: "We know you want to get the most out of your tires. That’s why we confidently back this tire with a warranty that helps protect you in the case of premature treadwear.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details.",
+          },
+          p2: {
+            topic: "Goodyear 60-Day Satisfaction Guarantee",
+            para: "We know you want to get the most out of your tires. That’s why we confidently back this tire with a warranty that helps protect you in the case of premature treadwear.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details.",
+          },
+          p3: {
+            topic:
+              "Highway Auto and Light Truck Tire Replacement Limited Warranty",
+            para: "Eligible for Replacement Limited Warranty, including noise and roughness protection.45,000 mi./ 75,000 km Exclusions apply; see full warranty for details.",
+          },
         },
         specification: {
           s1: { topic: "Load Range", parag: "XL" },
@@ -206,16 +258,40 @@ function ThemeProvider({ children }) {
           "Heavy-duty tyre designed for maximum durability and performance.",
         stock: 20,
         tireFeature: {
-          s1: { topic: "Exceptional Winter Performance", parag: "Designed to handle icy and snowy conditions with ease." },
-          s2: { topic: "Reinforced Sidewalls", parag: "Strong sidewalls to resist punctures and damage." },
-          s3: { topic: "Longer Tread Life", parag: "Engineered for extended mileage and reliable performance." },
-          s4: { topic: "Enhanced Road Contact", parag: "Improved tread pattern for better stability and handling." },
-          s5: { topic: "Eco-Friendly Design", parag: "Uses recycled and sustainable raw materials." },
+          s1: {
+            topic: "Exceptional Winter Performance",
+            parag: "Designed to handle icy and snowy conditions with ease.",
+          },
+          s2: {
+            topic: "Reinforced Sidewalls",
+            parag: "Strong sidewalls to resist punctures and damage.",
+          },
+          s3: {
+            topic: "Longer Tread Life",
+            parag: "Engineered for extended mileage and reliable performance.",
+          },
+          s4: {
+            topic: "Enhanced Road Contact",
+            parag: "Improved tread pattern for better stability and handling.",
+          },
+          s5: {
+            topic: "Eco-Friendly Design",
+            parag: "Uses recycled and sustainable raw materials.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Road Hazard Replacement Warranty", para: "Covers unexpected damage from road debris or hazards." },
-          p2: { topic: "Free Alignment Check", para: "Ensures proper alignment during installation to extend tire life." },
-          p3: { topic: "Limited Warranty on Noise Reduction", para: "Guarantees quieter rides for up to 40,000 miles. Exclusions apply." },
+          p1: {
+            topic: "Road Hazard Replacement Warranty",
+            para: "Covers unexpected damage from road debris or hazards.",
+          },
+          p2: {
+            topic: "Free Alignment Check",
+            para: "Ensures proper alignment during installation to extend tire life.",
+          },
+          p3: {
+            topic: "Limited Warranty on Noise Reduction",
+            para: "Guarantees quieter rides for up to 40,000 miles. Exclusions apply.",
+          },
         },
         qualityPoints: {
           allSeasonTire: {
@@ -230,7 +306,6 @@ function ThemeProvider({ children }) {
             label: "3PMSF",
             icon: <LuMountain />,
           },
-         
         },
         warranty: {
           w1: {
@@ -277,16 +352,40 @@ function ThemeProvider({ children }) {
           "Eco-friendly tyre with a focus on fuel efficiency and longevity.",
         stock: 18,
         tireFeature: {
-          s1: { topic: "Advanced Traction Technology", parag: "Delivers superior grip on both dry and wet roads." },
-          s2: { topic: "Noise-Reducing Design", parag: "Special foam layer minimizes road noise." },
-          s3: { topic: "Performance Under Pressure", parag: "Optimized for high-speed stability and durability." },
-          s4: { topic: "Eco-Conscious Manufacturing", parag: "Produced with environmentally friendly materials." },
-          s5: { topic: "Enhanced Driving Comfort", parag: "Designed to reduce vibrations and provide a smooth ride." },
+          s1: {
+            topic: "Advanced Traction Technology",
+            parag: "Delivers superior grip on both dry and wet roads.",
+          },
+          s2: {
+            topic: "Noise-Reducing Design",
+            parag: "Special foam layer minimizes road noise.",
+          },
+          s3: {
+            topic: "Performance Under Pressure",
+            parag: "Optimized for high-speed stability and durability.",
+          },
+          s4: {
+            topic: "Eco-Conscious Manufacturing",
+            parag: "Produced with environmentally friendly materials.",
+          },
+          s5: {
+            topic: "Enhanced Driving Comfort",
+            parag: "Designed to reduce vibrations and provide a smooth ride.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "60-Day Performance Guarantee", para: "If unsatisfied, return within 60 days for a full refund or replacement." },
-          p2: { topic: "Lifetime Flat Tire Repair", para: "Free flat repairs for the life of the tire. Exclusions apply." },
-          p3: { topic: "Treadwear Limited Warranty", para: "Backed by a 55,000-mile warranty for treadwear." },
+          p1: {
+            topic: "60-Day Performance Guarantee",
+            para: "If unsatisfied, return within 60 days for a full refund or replacement.",
+          },
+          p2: {
+            topic: "Lifetime Flat Tire Repair",
+            para: "Free flat repairs for the life of the tire. Exclusions apply.",
+          },
+          p3: {
+            topic: "Treadwear Limited Warranty",
+            para: "Backed by a 55,000-mile warranty for treadwear.",
+          },
         },
         qualityPoints: {
           allSeasonTire: {
@@ -343,16 +442,41 @@ function ThemeProvider({ children }) {
           "Performance tyre for high-speed stability and precision handling.",
         stock: 12,
         tireFeature: {
-          s1: { topic: "High-Performance Compound", parag: "Ensures durability and exceptional handling in all conditions." },
-          s2: { topic: "All-Weather Durability", parag: "Built to last through rain, snow, and heat." },
-          s3: { topic: "Precision Steering Response", parag: "Provides excellent feedback and precise cornering." },
-          s4: { topic: "Improved Water Dispersion", parag: "Tread grooves channel water away to reduce hydroplaning." },
-          s5: { topic: "Quieter Rides", parag: "Innovative patterns ensure reduced cabin noise." },
+          s1: {
+            topic: "High-Performance Compound",
+            parag:
+              "Ensures durability and exceptional handling in all conditions.",
+          },
+          s2: {
+            topic: "All-Weather Durability",
+            parag: "Built to last through rain, snow, and heat.",
+          },
+          s3: {
+            topic: "Precision Steering Response",
+            parag: "Provides excellent feedback and precise cornering.",
+          },
+          s4: {
+            topic: "Improved Water Dispersion",
+            parag: "Tread grooves channel water away to reduce hydroplaning.",
+          },
+          s5: {
+            topic: "Quieter Rides",
+            parag: "Innovative patterns ensure reduced cabin noise.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Replacement Guarantee", para: "Replace damaged tires for free under certain conditions." },
-          p2: { topic: "Free Roadside Assistance", para: "Access to 24/7 roadside assistance services for emergencies." },
-          p3: { topic: "Tread Life Warranty", para: "Warranty coverage up to 65,000 miles. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Replacement Guarantee",
+            para: "Replace damaged tires for free under certain conditions.",
+          },
+          p2: {
+            topic: "Free Roadside Assistance",
+            para: "Access to 24/7 roadside assistance services for emergencies.",
+          },
+          p3: {
+            topic: "Tread Life Warranty",
+            para: "Warranty coverage up to 65,000 miles. Exclusions apply.",
+          },
         },
         qualityPoints: {
           allSeasonTire: {
@@ -409,16 +533,41 @@ function ThemeProvider({ children }) {
           "Top choice for off-road and challenging terrains with extra rugged tread.",
         stock: 10,
         tireFeature: {
-          s1: { topic: "Ultimate Off-Road Durability", parag: "Designed to handle the toughest terrains with ease." },
-          s2: { topic: "Adaptive Tread Design", parag: "Automatically adjusts to road conditions for optimal performance." },
-          s3: { topic: "High-Speed Stability", parag: "Ensures balanced and stable performance at high speeds." },
-          s4: { topic: "Lightweight Construction", parag: "Reduces weight without compromising strength." },
-          s5: { topic: "Eco-Friendly Materials", parag: "Incorporates sustainable elements into the design." },
+          s1: {
+            topic: "Ultimate Off-Road Durability",
+            parag: "Designed to handle the toughest terrains with ease.",
+          },
+          s2: {
+            topic: "Adaptive Tread Design",
+            parag:
+              "Automatically adjusts to road conditions for optimal performance.",
+          },
+          s3: {
+            topic: "High-Speed Stability",
+            parag: "Ensures balanced and stable performance at high speeds.",
+          },
+          s4: {
+            topic: "Lightweight Construction",
+            parag: "Reduces weight without compromising strength.",
+          },
+          s5: {
+            topic: "Eco-Friendly Materials",
+            parag: "Incorporates sustainable elements into the design.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Comprehensive Hazard Warranty", para: "Covers punctures, blowouts, and other common hazards." },
-          p2: { topic: "Limited Performance Warranty", para: "Guarantees optimal performance for 70,000 miles. Exclusions apply." },
-          p3: { topic: "Noise Protection Guarantee", para: "Promised quieter rides under the warranty period. Exclusions apply." },
+          p1: {
+            topic: "Comprehensive Hazard Warranty",
+            para: "Covers punctures, blowouts, and other common hazards.",
+          },
+          p2: {
+            topic: "Limited Performance Warranty",
+            para: "Guarantees optimal performance for 70,000 miles. Exclusions apply.",
+          },
+          p3: {
+            topic: "Noise Protection Guarantee",
+            para: "Promised quieter rides under the warranty period. Exclusions apply.",
+          },
         },
         qualityPoints: {
           allSeasonTire: {
@@ -517,16 +666,41 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Cruise Quietly", parag: "The SoundComfort Technology® foam helps keep the noises of the road out of the car." },
-          s2: { topic: "Fuel Efficiency Optimized", parag: "Designed to reduce fuel consumption for longer rides." },
-          s3: { topic: "Enhanced Wet Traction", parag: "Improved tread design ensures safety on wet surfaces." },
-          s4: { topic: "Durability for Long Rides", parag: "Specially crafted for extended mileage and reliability." },
-          s5: { topic: "Eco-Friendly Composition", parag: "Built with sustainable and recyclable materials." },
+          s1: {
+            topic: "Cruise Quietly",
+            parag:
+              "The SoundComfort Technology® foam helps keep the noises of the road out of the car.",
+          },
+          s2: {
+            topic: "Fuel Efficiency Optimized",
+            parag: "Designed to reduce fuel consumption for longer rides.",
+          },
+          s3: {
+            topic: "Enhanced Wet Traction",
+            parag: "Improved tread design ensures safety on wet surfaces.",
+          },
+          s4: {
+            topic: "Durability for Long Rides",
+            parag: "Specially crafted for extended mileage and reliability.",
+          },
+          s5: {
+            topic: "Eco-Friendly Composition",
+            parag: "Built with sustainable and recyclable materials.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Limited Tread Life Warranty", para: "Covers premature treadwear for up to 40,000 miles. Exclusions apply." },
-          p2: { topic: "60-Day Satisfaction Guarantee", para: "Return within 60 days if not satisfied with performance. Exclusions apply." },
-          p3: { topic: "Comprehensive Hazard Coverage", para: "Protects against common road hazards like punctures." },
+          p1: {
+            topic: "Limited Tread Life Warranty",
+            para: "Covers premature treadwear for up to 40,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "60-Day Satisfaction Guarantee",
+            para: "Return within 60 days if not satisfied with performance. Exclusions apply.",
+          },
+          p3: {
+            topic: "Comprehensive Hazard Coverage",
+            para: "Protects against common road hazards like punctures.",
+          },
         },
         specification: {
           s1: { topic: "Engine Type", parag: "Single-cylinder, 4-stroke" },
@@ -570,16 +744,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "All-Season Performance", parag: "Engineered for reliable grip in all weather conditions." },
-          s2: { topic: "Quiet and Comfortable Ride", parag: "Tread design reduces vibrations and road noise." },
-          s3: { topic: "Durable Rubber Compound", parag: "High-quality materials ensure long-lasting performance." },
-          s4: { topic: "Optimized for City Roads", parag: "Designed to handle city driving with ease and efficiency." },
-          s5: { topic: "Energy Efficient", parag: "Low rolling resistance helps save fuel on every ride." },
+          s1: {
+            topic: "All-Season Performance",
+            parag: "Engineered for reliable grip in all weather conditions.",
+          },
+          s2: {
+            topic: "Quiet and Comfortable Ride",
+            parag: "Tread design reduces vibrations and road noise.",
+          },
+          s3: {
+            topic: "Durable Rubber Compound",
+            parag: "High-quality materials ensure long-lasting performance.",
+          },
+          s4: {
+            topic: "Optimized for City Roads",
+            parag: "Designed to handle city driving with ease and efficiency.",
+          },
+          s5: {
+            topic: "Energy Efficient",
+            parag: "Low rolling resistance helps save fuel on every ride.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Flat Repair Service", para: "Covers puncture repairs for the life of the tire." },
-          p2: { topic: "Treadwear Warranty", para: "Backed by a warranty covering 50,000 miles. Exclusions apply." },
-          p3: { topic: "Roadside Assistance Program", para: "24/7 roadside assistance included for emergencies." },
+          p1: {
+            topic: "Lifetime Flat Repair Service",
+            para: "Covers puncture repairs for the life of the tire.",
+          },
+          p2: {
+            topic: "Treadwear Warranty",
+            para: "Backed by a warranty covering 50,000 miles. Exclusions apply.",
+          },
+          p3: {
+            topic: "Roadside Assistance Program",
+            para: "24/7 roadside assistance included for emergencies.",
+          },
         },
         warranty: {
           w1: {
@@ -643,16 +841,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Exceptional Traction", parag: "Superior grip for smooth handling on rough terrains." },
-          s2: { topic: "Weather-Resistant Build", parag: "Performs well under varying temperature conditions." },
-          s3: { topic: "High-Speed Stability", parag: "Ensures a steady and balanced ride at high speeds." },
-          s4: { topic: "Long-Lasting Tread", parag: "Special compounds extend tread life for more miles." },
-          s5: { topic: "Noise Reduction Technology", parag: "Designed to keep road noise to a minimum for quiet rides." },
+          s1: {
+            topic: "Exceptional Traction",
+            parag: "Superior grip for smooth handling on rough terrains.",
+          },
+          s2: {
+            topic: "Weather-Resistant Build",
+            parag: "Performs well under varying temperature conditions.",
+          },
+          s3: {
+            topic: "High-Speed Stability",
+            parag: "Ensures a steady and balanced ride at high speeds.",
+          },
+          s4: {
+            topic: "Long-Lasting Tread",
+            parag: "Special compounds extend tread life for more miles.",
+          },
+          s5: {
+            topic: "Noise Reduction Technology",
+            parag: "Designed to keep road noise to a minimum for quiet rides.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Noise-Free Guarantee", para: "Guaranteed reduced cabin noise for up to 45,000 miles." },
-          p2: { topic: "Eco-Friendly Warranty", para: "Covers tires made with sustainable materials. Exclusions apply." },
-          p3: { topic: "Performance Guarantee", para: "Promised performance for all terrains and conditions." },
+          p1: {
+            topic: "Noise-Free Guarantee",
+            para: "Guaranteed reduced cabin noise for up to 45,000 miles.",
+          },
+          p2: {
+            topic: "Eco-Friendly Warranty",
+            para: "Covers tires made with sustainable materials. Exclusions apply.",
+          },
+          p3: {
+            topic: "Performance Guarantee",
+            para: "Promised performance for all terrains and conditions.",
+          },
         },
         warranty: {
           w1: {
@@ -706,16 +928,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Reinforced Sidewalls", parag: "Designed to resist punctures and absorb shocks." },
-          s2: { topic: "Optimized for Urban Roads", parag: "Effortless handling on crowded city streets." },
-          s3: { topic: "Comfortable Ride Experience", parag: "Reduces vibrations for a smooth, enjoyable ride." },
-          s4: { topic: "Efficient Water Dispersion", parag: "Tread pattern channels water to prevent hydroplaning." },
-          s5: { topic: "Lightweight Construction", parag: "Reduces weight for improved fuel efficiency." },
+          s1: {
+            topic: "Reinforced Sidewalls",
+            parag: "Designed to resist punctures and absorb shocks.",
+          },
+          s2: {
+            topic: "Optimized for Urban Roads",
+            parag: "Effortless handling on crowded city streets.",
+          },
+          s3: {
+            topic: "Comfortable Ride Experience",
+            parag: "Reduces vibrations for a smooth, enjoyable ride.",
+          },
+          s4: {
+            topic: "Efficient Water Dispersion",
+            parag: "Tread pattern channels water to prevent hydroplaning.",
+          },
+          s5: {
+            topic: "Lightweight Construction",
+            parag: "Reduces weight for improved fuel efficiency.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Replacement Guarantee", para: "Free replacement for manufacturing defects. Exclusions apply." },
-          p2: { topic: "Extended Mileage Warranty", para: "Covers 60,000 miles of treadwear. Exclusions apply." },
-          p3: { topic: "Road Hazard Warranty", para: "Includes coverage for unexpected damages caused by road debris." },
+          p1: {
+            topic: "Lifetime Replacement Guarantee",
+            para: "Free replacement for manufacturing defects. Exclusions apply.",
+          },
+          p2: {
+            topic: "Extended Mileage Warranty",
+            para: "Covers 60,000 miles of treadwear. Exclusions apply.",
+          },
+          p3: {
+            topic: "Road Hazard Warranty",
+            para: "Includes coverage for unexpected damages caused by road debris.",
+          },
         },
         warranty: {
           w1: {
@@ -771,16 +1017,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Ultimate Off-Road Performance", parag: "Handles rough and unpaved terrains effortlessly." },
-          s2: { topic: "Eco-Conscious Production", parag: "Manufactured using environment-friendly techniques." },
-          s3: { topic: "Precision Handling", parag: "Provides accurate and responsive steering feedback." },
-          s4: { topic: "Adaptive Grip Technology", parag: "Adjusts grip based on road conditions for enhanced safety." },
-          s5: { topic: "Superior Tread Life", parag: "Designed to last longer, ensuring better value." },
+          s1: {
+            topic: "Ultimate Off-Road Performance",
+            parag: "Handles rough and unpaved terrains effortlessly.",
+          },
+          s2: {
+            topic: "Eco-Conscious Production",
+            parag: "Manufactured using environment-friendly techniques.",
+          },
+          s3: {
+            topic: "Precision Handling",
+            parag: "Provides accurate and responsive steering feedback.",
+          },
+          s4: {
+            topic: "Adaptive Grip Technology",
+            parag: "Adjusts grip based on road conditions for enhanced safety.",
+          },
+          s5: {
+            topic: "Superior Tread Life",
+            parag: "Designed to last longer, ensuring better value.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Comprehensive Tread Life Warranty", para: "Covers treadwear up to 70,000 miles. Exclusions apply." },
-          p2: { topic: "Satisfaction Guarantee", para: "Refund or replacement if unsatisfied within 60 days. Exclusions apply." },
-          p3: { topic: "Flat Tire Assistance", para: "Covers free repair or replacement of punctured tires. Exclusions apply." },
+          p1: {
+            topic: "Comprehensive Tread Life Warranty",
+            para: "Covers treadwear up to 70,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "Refund or replacement if unsatisfied within 60 days. Exclusions apply.",
+          },
+          p3: {
+            topic: "Flat Tire Assistance",
+            para: "Covers free repair or replacement of punctured tires. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -838,16 +1108,42 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Advanced Wet Grip", parag: "Maximized water dispersion for improved wet road performance." },
-          s2: { topic: "Stable Cornering", parag: "Provides balance and control during sharp turns." },
-          s3: { topic: "Fuel-Saving Tread Design", parag: "Optimized for low rolling resistance, improving fuel economy." },
-          s4: { topic: "Noise-Free Technology", parag: "Reduces noise levels significantly for quieter rides." },
-          s5: { topic: "Weather Adaptability", parag: "Performs consistently across all weather conditions." },
+          s1: {
+            topic: "Advanced Wet Grip",
+            parag:
+              "Maximized water dispersion for improved wet road performance.",
+          },
+          s2: {
+            topic: "Stable Cornering",
+            parag: "Provides balance and control during sharp turns.",
+          },
+          s3: {
+            topic: "Fuel-Saving Tread Design",
+            parag:
+              "Optimized for low rolling resistance, improving fuel economy.",
+          },
+          s4: {
+            topic: "Noise-Free Technology",
+            parag: "Reduces noise levels significantly for quieter rides.",
+          },
+          s5: {
+            topic: "Weather Adaptability",
+            parag: "Performs consistently across all weather conditions.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Alignment Checks", para: "Enjoy free alignment checks for optimal performance." },
-          p2: { topic: "Performance Warranty", para: "Guaranteed performance under varied conditions for 55,000 miles." },
-          p3: { topic: "Eco-Friendly Material Coverage", para: "Covers sustainable material-based tires. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Alignment Checks",
+            para: "Enjoy free alignment checks for optimal performance.",
+          },
+          p2: {
+            topic: "Performance Warranty",
+            para: "Guaranteed performance under varied conditions for 55,000 miles.",
+          },
+          p3: {
+            topic: "Eco-Friendly Material Coverage",
+            para: "Covers sustainable material-based tires. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -883,423 +1179,570 @@ function ThemeProvider({ children }) {
       },
     ],
     Prider: [
-        {
-          image:Prider1 ,
-          name: "Prider Speed Pro",
-          price: 2200,
-          size: "2.50-17",
-          brand: "Prider",
-          description:
-            "High-performance tyre designed for speed enthusiasts and sporty rides.",
-          stock: 35,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "60km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "5PMSF",
-              icon: <LuMountain />,
-            },
-          },
-          tireFeature: {
-            s1: { topic: "Quiet and Smooth Rides", parag: "Designed to reduce road noise and offer exceptional comfort." },
-            s2: { topic: "Eco-Friendly Design", parag: "Manufactured using sustainable materials to minimize environmental impact." },
-            s3: { topic: "Superior Traction", parag: "Provides excellent grip on wet and dry roads." },
-            s4: { topic: "Extended Tread Life", parag: "Built for durability, ensuring a long-lasting performance." },
-            s5: { topic: "Fuel Efficiency", parag: "Optimized for lower rolling resistance, saving fuel costs." },
-          },
-          WarrantiesGuarantees: {
-            p1: { topic: "Lifetime Treadwear Warranty", para: "Backed by a comprehensive treadwear warranty for 60,000 miles. Exclusions apply." },
-            p2: { topic: "30-Day Satisfaction Guarantee", para: "Refund or replacement if not satisfied within 30 days of purchase." },
-            p3: { topic: "Road Hazard Protection", para: "Covers punctures and other road-related damages. Exclusions apply." },
+      {
+        image: Prider1,
+        name: "Prider Speed Pro",
+        price: 2200,
+        size: "2.50-17",
+        brand: "Prider",
+        description:
+          "High-performance tyre designed for speed enthusiasts and sporty rides.",
+        stock: 35,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Standard Warranty",
-              paragraphw:
-                "2-year warranty covering defects in material and workmanship.",
-            },
-            w2: {
-              topicsw: "Engine Warranty",
-              paragraphw:
-                "1-year warranty on engine components, excluding wear and tear.",
-            },
-            w3: {
-              topicsw: "Battery Warranty",
-              paragraphw:
-                "6-month warranty on battery defects under normal usage.",
-            },
-            w4: {
-              topicsw: "Frame Warranty",
-              paragraphw:
-                "Lifetime warranty on the frame against structural defects.",
-            },
+            label: "60km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Type", parag: "Single-cylinder, 4-stroke" },
-            s2: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
-            s3: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
-            s4: { topic: "Max Torque", parag: "6.0 Nm @ 6,000 rpm" },
-            s5: { topic: "Transmission", parag: "4-speed constant mesh" },
-            s6: { topic: "Brakes", parag: "Drum brakes (front and rear)" },
-            s7: {
-              topic: "Suspension",
-              parag: "Telescopic front, twin shock rear",
-            },
-            s8: { topic: "Seat Height", parag: "775 mm" },
-            s9: { topic: "Ground Clearance", parag: "160 mm" },
-            s10: { topic: "Kerb Weight", parag: "98 kg" },
-            s11: { topic: "Tire Size (Front)", parag: "2.50 - 17" },
-            s12: { topic: "Tire Size (Rear)", parag: "2.75 - 17" },
+          speed: {
+            label: "5PMSF",
+            icon: <LuMountain />,
           },
         },
-        {
-          image: Prider2,
-          name: "Prider Comfort Plus",
-          price: 2400,
-          size: "2.75-17",
-          brand: "Prider",
-          description:
-            "Designed for ultimate comfort, providing a smooth and quiet ride on all roads.",
-          stock: 28,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "70km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "3PMSF",
-              icon: <LuMountain />,
-            },
+        tireFeature: {
+          s1: {
+            topic: "Quiet and Smooth Rides",
+            parag:
+              "Designed to reduce road noise and offer exceptional comfort.",
           },
-          tireFeature: {
-            s1: { topic: "Enhanced Performance", parag: "Designed to provide top-notch handling and stability." },
-            s2: { topic: "All-Weather Capability", parag: "Performs reliably in both summer and winter conditions." },
-            s3: { topic: "High-Speed Safety", parag: "Engineered to maintain stability at high speeds." },
-            s4: { topic: "Improved Comfort", parag: "Absorbs shocks for a smoother, more comfortable ride." },
-            s5: { topic: "Optimized Water Dispersion", parag: "Channels water efficiently to reduce hydroplaning risk." },
+          s2: {
+            topic: "Eco-Friendly Design",
+            parag:
+              "Manufactured using sustainable materials to minimize environmental impact.",
           },
-          WarrantiesGuarantees: {
-            p1: { topic: "Comprehensive Mileage Warranty", para: "Guaranteed performance for up to 50,000 miles. Exclusions apply." },
-            p2: { topic: "Flat Tire Assistance", para: "Free repair or replacement for flat tires. Exclusions apply." },
-            p3: { topic: "Noise-Free Ride Guarantee", para: "Guaranteed quiet performance on all road surfaces. Exclusions apply." },
+          s3: {
+            topic: "Superior Traction",
+            parag: "Provides excellent grip on wet and dry roads.",
+          },
+          s4: {
+            topic: "Extended Tread Life",
+            parag: "Built for durability, ensuring a long-lasting performance.",
+          },
+          s5: {
+            topic: "Fuel Efficiency",
+            parag: "Optimized for lower rolling resistance, saving fuel costs.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Lifetime Treadwear Warranty",
+            para: "Backed by a comprehensive treadwear warranty for 60,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "30-Day Satisfaction Guarantee",
+            para: "Refund or replacement if not satisfied within 30 days of purchase.",
+          },
+          p3: {
+            topic: "Road Hazard Protection",
+            para: "Covers punctures and other road-related damages. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Standard Warranty",
+            paragraphw:
+              "2-year warranty covering defects in material and workmanship.",
+          },
+          w2: {
+            topicsw: "Engine Warranty",
+            paragraphw:
+              "1-year warranty on engine components, excluding wear and tear.",
+          },
+          w3: {
+            topicsw: "Battery Warranty",
+            paragraphw:
+              "6-month warranty on battery defects under normal usage.",
+          },
+          w4: {
+            topicsw: "Frame Warranty",
+            paragraphw:
+              "Lifetime warranty on the frame against structural defects.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Type", parag: "Single-cylinder, 4-stroke" },
+          s2: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
+          s3: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
+          s4: { topic: "Max Torque", parag: "6.0 Nm @ 6,000 rpm" },
+          s5: { topic: "Transmission", parag: "4-speed constant mesh" },
+          s6: { topic: "Brakes", parag: "Drum brakes (front and rear)" },
+          s7: {
+            topic: "Suspension",
+            parag: "Telescopic front, twin shock rear",
+          },
+          s8: { topic: "Seat Height", parag: "775 mm" },
+          s9: { topic: "Ground Clearance", parag: "160 mm" },
+          s10: { topic: "Kerb Weight", parag: "98 kg" },
+          s11: { topic: "Tire Size (Front)", parag: "2.50 - 17" },
+          s12: { topic: "Tire Size (Rear)", parag: "2.75 - 17" },
+        },
+      },
+      {
+        image: Prider2,
+        name: "Prider Comfort Plus",
+        price: 2400,
+        size: "2.75-17",
+        brand: "Prider",
+        description:
+          "Designed for ultimate comfort, providing a smooth and quiet ride on all roads.",
+        stock: 28,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Comprehensive Warranty",
-              paragraphw:
-                "2-year warranty on all parts and labor, excluding wearables.",
-            },
-            w2: {
-              topicsw: "Engine Warranty",
-              paragraphw:
-                "1-year warranty for engine failure due to manufacturing defects.",
-            },
-            w3: {
-              topicsw: "Roadside Assistance",
-              paragraphw:
-                "1-year free roadside assistance in case of breakdowns.",
-            },
-            w4: {
-              topicsw: "Tire Warranty",
-              paragraphw:
-                "6-month warranty for defects in tires under normal use.",
-            },
+            label: "70km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Displacement", parag: "72cc" },
-            s2: { topic: "Fuel Efficiency", parag: "65 km/l" },
-            s3: {
-              topic: "Ignition System",
-              parag: "Transistorized Coil Ignition",
-            },
-            s4: { topic: "Compression Ratio", parag: "9.1:1" },
-            s5: { topic: "Lubrication", parag: "Wet sump" },
-            s6: { topic: "Brakes", parag: "130 mm drum (front & rear)" },
-            s7: { topic: "Front Suspension", parag: "Telescopic fork" },
-            s8: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
-            s9: { topic: "Kerb Weight", parag: "100 kg" },
-            s10: { topic: "Top Speed", parag: "90 km/h" },
-            s11: { topic: "Speedometer", parag: "Analog" },
+          speed: {
+            label: "3PMSF",
+            icon: <LuMountain />,
           },
         },
-        {
-          image: Prider3,
-          name: "Prider Trail Master",
-          price: 2600,
-          size: "3.00-17",
-          brand: "Prider",
-          description:
-            "Durable tyre built for rugged trails, providing excellent grip and stability.",
-          stock: 20,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "75km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "4PMSF",
-              icon: <LuMountain />,
-            },
+        tireFeature: {
+          s1: {
+            topic: "Enhanced Performance",
+            parag: "Designed to provide top-notch handling and stability.",
           },
-          tireFeature: {
-            s1: { topic: "Durability for Rough Roads", parag: "Specially crafted for rugged terrain and off-road performance." },
-            s2: { topic: "Low Noise Technology", parag: "Reduces cabin noise for a peaceful driving experience." },
-            s3: { topic: "Precision Handling", parag: "Enhanced control and responsiveness in tight corners." },
-            s4: { topic: "High-Performance Compound", parag: "Premium materials ensure maximum longevity and performance." },
-            s5: { topic: "Eco-Conscious Manufacturing", parag: "Made with processes that prioritize sustainability." },
+          s2: {
+            topic: "All-Weather Capability",
+            parag: "Performs reliably in both summer and winter conditions.",
           },
-          WarrantiesGuarantees: {
-            p1: { topic: "Treadwear Protection", para: "Comes with a warranty that covers up to 70,000 miles. Exclusions apply." },
-            p2: { topic: "Satisfaction Guarantee", para: "Return within 45 days if not completely satisfied. Exclusions apply." },
-            p3: { topic: "Hazard Coverage Warranty", para: "Protects against damage caused by road hazards. Exclusions apply." },
+          s3: {
+            topic: "High-Speed Safety",
+            parag: "Engineered to maintain stability at high speeds.",
+          },
+          s4: {
+            topic: "Improved Comfort",
+            parag: "Absorbs shocks for a smoother, more comfortable ride.",
+          },
+          s5: {
+            topic: "Optimized Water Dispersion",
+            parag: "Channels water efficiently to reduce hydroplaning risk.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Comprehensive Mileage Warranty",
+            para: "Guaranteed performance for up to 50,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "Flat Tire Assistance",
+            para: "Free repair or replacement for flat tires. Exclusions apply.",
+          },
+          p3: {
+            topic: "Noise-Free Ride Guarantee",
+            para: "Guaranteed quiet performance on all road surfaces. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Comprehensive Warranty",
+            paragraphw:
+              "2-year warranty on all parts and labor, excluding wearables.",
+          },
+          w2: {
+            topicsw: "Engine Warranty",
+            paragraphw:
+              "1-year warranty for engine failure due to manufacturing defects.",
+          },
+          w3: {
+            topicsw: "Roadside Assistance",
+            paragraphw:
+              "1-year free roadside assistance in case of breakdowns.",
+          },
+          w4: {
+            topicsw: "Tire Warranty",
+            paragraphw:
+              "6-month warranty for defects in tires under normal use.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Displacement", parag: "72cc" },
+          s2: { topic: "Fuel Efficiency", parag: "65 km/l" },
+          s3: {
+            topic: "Ignition System",
+            parag: "Transistorized Coil Ignition",
+          },
+          s4: { topic: "Compression Ratio", parag: "9.1:1" },
+          s5: { topic: "Lubrication", parag: "Wet sump" },
+          s6: { topic: "Brakes", parag: "130 mm drum (front & rear)" },
+          s7: { topic: "Front Suspension", parag: "Telescopic fork" },
+          s8: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
+          s9: { topic: "Kerb Weight", parag: "100 kg" },
+          s10: { topic: "Top Speed", parag: "90 km/h" },
+          s11: { topic: "Speedometer", parag: "Analog" },
+        },
+      },
+      {
+        image: Prider3,
+        name: "Prider Trail Master",
+        price: 2600,
+        size: "3.00-17",
+        brand: "Prider",
+        description:
+          "Durable tyre built for rugged trails, providing excellent grip and stability.",
+        stock: 20,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Factory Warranty",
-              paragraphw:
-                "2-year comprehensive warranty for all major components.",
-            },
-            w2: {
-              topicsw: "Engine Warranty",
-              paragraphw:
-                "1-year engine warranty for defects under normal use.",
-            },
-            w3: {
-              topicsw: "Frame Warranty",
-              paragraphw: "Lifetime frame warranty against structural defects.",
-            },
-            w4: {
-              topicsw: "Battery Warranty",
-              paragraphw:
-                "6-month warranty on the battery for manufacturing defects.",
-            },
+            label: "75km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Cooling", parag: "Air-cooled" },
-            s2: { topic: "Bore x Stroke", parag: "47 x 41.4 mm" },
-            s3: { topic: "Fuel System", parag: "Carburetor" },
-            s4: { topic: "Max Torque", parag: "6.2 Nm @ 6,500 rpm" },
-            s5: { topic: "Lubrication", parag: "Wet sump" },
-            s6: { topic: "Frame Material", parag: "Steel" },
-            s7: { topic: "Tire Size (Front)", parag: "2.50 - 17" },
-            s8: { topic: "Tire Size (Rear)", parag: "2.75 - 17" },
-            s9: { topic: "Ground Clearance", parag: "160 mm" },
-            s10: { topic: "Max Speed", parag: "95 km/h" },
-            s11: { topic: "Headlamp", parag: "12V, 35W/35W halogen" },
+          speed: {
+            label: "4PMSF",
+            icon: <LuMountain />,
           },
         },
-        {
-          image: Prider4,
-          name: "Prider City Glide",
-          price: 2100,
-          size: "2.50-16",
-          brand: "Prider",
-          description:
-            "Optimized for city commuting, offering a smooth ride with reliable traction.",
-          stock: 40,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "65km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "2PMSF",
-              icon: <LuMountain />,
-            },
+        tireFeature: {
+          s1: {
+            topic: "Durability for Rough Roads",
+            parag:
+              "Specially crafted for rugged terrain and off-road performance.",
           },
-          tireFeature: {
-            s1: { topic: "Advanced Grip Technology", parag: "Offers exceptional traction on wet and icy roads." },
-            s2: { topic: "Long-Lasting Tread Design", parag: "Engineered for extended durability and wear resistance." },
-            s3: { topic: "Lightweight Construction", parag: "Reduces weight for improved fuel efficiency and handling." },
-            s4: { topic: "Comfort-Driven Design", parag: "Absorbs road vibrations for a smooth, noise-free ride." },
-            s5: { topic: "Adaptability to Weather", parag: "Performs consistently across varying weather conditions." },
+          s2: {
+            topic: "Low Noise Technology",
+            parag: "Reduces cabin noise for a peaceful driving experience.",
           },
-          WarrantiesGuarantees: {
-            p1: { topic: "Lifetime Roadside Assistance", para: "Covers roadside emergencies including flat tires. Exclusions apply." },
-            p2: { topic: "Mileage Guarantee", para: "Covers up to 65,000 miles of treadwear. Exclusions apply." },
-            p3: { topic: "Eco-Tire Replacement Warranty", para: "Includes replacement for environmentally friendly tires. Exclusions apply." },
+          s3: {
+            topic: "Precision Handling",
+            parag: "Enhanced control and responsiveness in tight corners.",
+          },
+          s4: {
+            topic: "High-Performance Compound",
+            parag:
+              "Premium materials ensure maximum longevity and performance.",
+          },
+          s5: {
+            topic: "Eco-Conscious Manufacturing",
+            parag: "Made with processes that prioritize sustainability.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Treadwear Protection",
+            para: "Comes with a warranty that covers up to 70,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "Return within 45 days if not completely satisfied. Exclusions apply.",
+          },
+          p3: {
+            topic: "Hazard Coverage Warranty",
+            para: "Protects against damage caused by road hazards. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Factory Warranty",
+            paragraphw:
+              "2-year comprehensive warranty for all major components.",
+          },
+          w2: {
+            topicsw: "Engine Warranty",
+            paragraphw: "1-year engine warranty for defects under normal use.",
+          },
+          w3: {
+            topicsw: "Frame Warranty",
+            paragraphw: "Lifetime frame warranty against structural defects.",
+          },
+          w4: {
+            topicsw: "Battery Warranty",
+            paragraphw:
+              "6-month warranty on the battery for manufacturing defects.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Cooling", parag: "Air-cooled" },
+          s2: { topic: "Bore x Stroke", parag: "47 x 41.4 mm" },
+          s3: { topic: "Fuel System", parag: "Carburetor" },
+          s4: { topic: "Max Torque", parag: "6.2 Nm @ 6,500 rpm" },
+          s5: { topic: "Lubrication", parag: "Wet sump" },
+          s6: { topic: "Frame Material", parag: "Steel" },
+          s7: { topic: "Tire Size (Front)", parag: "2.50 - 17" },
+          s8: { topic: "Tire Size (Rear)", parag: "2.75 - 17" },
+          s9: { topic: "Ground Clearance", parag: "160 mm" },
+          s10: { topic: "Max Speed", parag: "95 km/h" },
+          s11: { topic: "Headlamp", parag: "12V, 35W/35W halogen" },
+        },
+      },
+      {
+        image: Prider4,
+        name: "Prider City Glide",
+        price: 2100,
+        size: "2.50-16",
+        brand: "Prider",
+        description:
+          "Optimized for city commuting, offering a smooth ride with reliable traction.",
+        stock: 40,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Comprehensive Warranty",
-              paragraphw:
-                "2-year full warranty covering all parts and components.",
-            },
-            w2: {
-              topicsw: "Battery Warranty",
-              paragraphw: "1-year warranty on battery against defects.",
-            },
-            w3: {
-              topicsw: "Paint Warranty",
-              paragraphw:
-                "1-year warranty on paint against fading or chipping.",
-            },
-            w4: {
-              topicsw: "Roadside Assistance",
-              paragraphw: "1-year free roadside assistance provided.",
-            },
+            label: "65km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Displacement", parag: "72cc" },
-            s2: { topic: "Fuel Economy", parag: "65 km/l" },
-            s3: { topic: "Compression Ratio", parag: "9.1:1" },
-            s4: { topic: "Transmission", parag: "4-speed constant mesh" },
-            s5: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
-            s6: { topic: "Brakes", parag: "Drum brakes, 130 mm" },
-            s7: { topic: "Front Suspension", parag: "Telescopic" },
-            s8: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
-            s9: { topic: "Seat Height", parag: "780 mm" },
-            s10: { topic: "Ground Clearance", parag: "165 mm" },
-            s11: { topic: "Kerb Weight", parag: "98 kg" },
-            s12: { topic: "Top Speed", parag: "90 km/h" },
+          speed: {
+            label: "2PMSF",
+            icon: <LuMountain />,
           },
         },
-        {
-          image: Prider1,
-          name: "Prider Eco Drive",
-          price: 2300,
-          size: "2.75-17",
-          brand: "Prider",
-          description:
-            "Eco-friendly tyre focused on fuel efficiency and long-lasting performance.",
-          stock: 32,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "80km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "3PMSF",
-              icon: <LuMountain />,
-            },
+        tireFeature: {
+          s1: {
+            topic: "Advanced Grip Technology",
+            parag: "Offers exceptional traction on wet and icy roads.",
           },
-          tireFeature: {
-            s1: { topic: "Reinforced Sidewalls", parag: "Protects against impact damage and improves stability." },
-            s2: { topic: "Urban Road Optimization", parag: "Ideal for city driving with superior performance." },
-            s3: { topic: "Hydroplaning Resistance", parag: "Efficient water dispersion ensures a safer ride on wet roads." },
-            s4: { topic: "Noise-Reduction Features", parag: "Advanced technology to minimize noise levels." },
-            s5: { topic: "Fuel-Saving Technology", parag: "Enhances fuel economy with low rolling resistance." },
+          s2: {
+            topic: "Long-Lasting Tread Design",
+            parag: "Engineered for extended durability and wear resistance.",
           },
-          WarrantiesGuarantees: {
-            p1: { topic: "Lifetime Manufacturing Defect Warranty", para: "Covers replacement for any manufacturing defects. Exclusions apply." },
-            p2: { topic: "Extended Performance Warranty", para: "Backed for up to 75,000 miles of performance. Exclusions apply." },
-            p3: { topic: "Hazard Warranty Protection", para: "Includes protection against accidental damage. Exclusions apply." },
+          s3: {
+            topic: "Lightweight Construction",
+            parag: "Reduces weight for improved fuel efficiency and handling.",
+          },
+          s4: {
+            topic: "Comfort-Driven Design",
+            parag: "Absorbs road vibrations for a smooth, noise-free ride.",
+          },
+          s5: {
+            topic: "Adaptability to Weather",
+            parag: "Performs consistently across varying weather conditions.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Lifetime Roadside Assistance",
+            para: "Covers roadside emergencies including flat tires. Exclusions apply.",
+          },
+          p2: {
+            topic: "Mileage Guarantee",
+            para: "Covers up to 65,000 miles of treadwear. Exclusions apply.",
+          },
+          p3: {
+            topic: "Eco-Tire Replacement Warranty",
+            para: "Includes replacement for environmentally friendly tires. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Comprehensive Warranty",
+            paragraphw:
+              "2-year full warranty covering all parts and components.",
+          },
+          w2: {
+            topicsw: "Battery Warranty",
+            paragraphw: "1-year warranty on battery against defects.",
+          },
+          w3: {
+            topicsw: "Paint Warranty",
+            paragraphw: "1-year warranty on paint against fading or chipping.",
+          },
+          w4: {
+            topicsw: "Roadside Assistance",
+            paragraphw: "1-year free roadside assistance provided.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Displacement", parag: "72cc" },
+          s2: { topic: "Fuel Economy", parag: "65 km/l" },
+          s3: { topic: "Compression Ratio", parag: "9.1:1" },
+          s4: { topic: "Transmission", parag: "4-speed constant mesh" },
+          s5: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
+          s6: { topic: "Brakes", parag: "Drum brakes, 130 mm" },
+          s7: { topic: "Front Suspension", parag: "Telescopic" },
+          s8: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
+          s9: { topic: "Seat Height", parag: "780 mm" },
+          s10: { topic: "Ground Clearance", parag: "165 mm" },
+          s11: { topic: "Kerb Weight", parag: "98 kg" },
+          s12: { topic: "Top Speed", parag: "90 km/h" },
+        },
+      },
+      {
+        image: Prider1,
+        name: "Prider Eco Drive",
+        price: 2300,
+        size: "2.75-17",
+        brand: "Prider",
+        description:
+          "Eco-friendly tyre focused on fuel efficiency and long-lasting performance.",
+        stock: 32,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Full Warranty",
-              paragraphw:
-                "2-year warranty covering engine and electrical components.",
-            },
-            w2: {
-              topicsw: "Roadside Assistance",
-              paragraphw: "Free 1-year roadside assistance for breakdowns.",
-            },
-            w3: {
-              topicsw: "Battery Warranty",
-              paragraphw:
-                "6-month battery warranty for defects under normal usage.",
-            },
+            label: "80km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Displacement", parag: "72cc" },
-            s2: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
-            s3: { topic: "Max Torque", parag: "6.0 Nm @ 6,500 rpm" },
-            s4: { topic: "Lubrication", parag: "Wet sump" },
-            s5: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
-            s6: { topic: "Front Suspension", parag: "Telescopic" },
-            s7: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
-            s8: { topic: "Kerb Weight", parag: "100 kg" },
-            s9: { topic: "Top Speed", parag: "90 km/h" },
-            s10: { topic: "Ground Clearance", parag: "165 mm" },
+          speed: {
+            label: "3PMSF",
+            icon: <LuMountain />,
           },
         },
-        {
-          image: Prider2,
-          name: "Prider Heavy Duty",
-          price: 3000,
-          size: "3.25-18",
-          brand: "Prider",
-          description:
-            "Built for heavy-duty use, ideal for vehicles with higher load capacities.",
-          stock: 15,
-          qualityPoints: {
-            allSeasonTire: {
-              label: "All Season Tire",
-              icon: <BsCloudSun />,
-            },
-            warranty: {
-              label: "90km Warranty",
-              icon: <PiMedalLight />,
-            },
-            speed: {
-              label: "5PMSF",
-              icon: <LuMountain />,
-            },
+        tireFeature: {
+          s1: {
+            topic: "Reinforced Sidewalls",
+            parag: "Protects against impact damage and improves stability.",
           },
-          tireFeature: {
-            s1: { topic: "Optimized Cornering Grip", parag: "Ensures stability and safety during sharp turns." },
-            s2: { topic: "All-Terrain Capability", parag: "Performs well on both highways and rough roads." },
-            s3: { topic: "Energy-Efficient Compound", parag: "Minimizes energy loss, improving fuel economy." },
-            s4: { topic: "Durable and Reliable", parag: "Constructed with high-quality materials for extended life." },
-            s5: { topic: "Comfort-First Approach", parag: "Designed to absorb shocks for a smoother ride." },
+          s2: {
+            topic: "Urban Road Optimization",
+            parag: "Ideal for city driving with superior performance.",
           },
-          WarrantiesGuarantees: {
-            p1: { topic: "Flat Tire Repair Coverage", para: "Includes free flat tire repair for the life of the tire. Exclusions apply." },
-            p2: { topic: "Satisfaction Return Policy", para: "Eligible for return or exchange within 30 days. Exclusions apply." },
-            p3: { topic: "Lifetime Road Hazard Warranty", para: "Protects against road-related damages for the life of the tire. Exclusions apply." },
+          s3: {
+            topic: "Hydroplaning Resistance",
+            parag:
+              "Efficient water dispersion ensures a safer ride on wet roads.",
+          },
+          s4: {
+            topic: "Noise-Reduction Features",
+            parag: "Advanced technology to minimize noise levels.",
+          },
+          s5: {
+            topic: "Fuel-Saving Technology",
+            parag: "Enhances fuel economy with low rolling resistance.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Lifetime Manufacturing Defect Warranty",
+            para: "Covers replacement for any manufacturing defects. Exclusions apply.",
+          },
+          p2: {
+            topic: "Extended Performance Warranty",
+            para: "Backed for up to 75,000 miles of performance. Exclusions apply.",
+          },
+          p3: {
+            topic: "Hazard Warranty Protection",
+            para: "Includes protection against accidental damage. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Full Warranty",
+            paragraphw:
+              "2-year warranty covering engine and electrical components.",
+          },
+          w2: {
+            topicsw: "Roadside Assistance",
+            paragraphw: "Free 1-year roadside assistance for breakdowns.",
+          },
+          w3: {
+            topicsw: "Battery Warranty",
+            paragraphw:
+              "6-month battery warranty for defects under normal usage.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Displacement", parag: "72cc" },
+          s2: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
+          s3: { topic: "Max Torque", parag: "6.0 Nm @ 6,500 rpm" },
+          s4: { topic: "Lubrication", parag: "Wet sump" },
+          s5: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
+          s6: { topic: "Front Suspension", parag: "Telescopic" },
+          s7: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
+          s8: { topic: "Kerb Weight", parag: "100 kg" },
+          s9: { topic: "Top Speed", parag: "90 km/h" },
+          s10: { topic: "Ground Clearance", parag: "165 mm" },
+        },
+      },
+      {
+        image: Prider2,
+        name: "Prider Heavy Duty",
+        price: 3000,
+        size: "3.25-18",
+        brand: "Prider",
+        description:
+          "Built for heavy-duty use, ideal for vehicles with higher load capacities.",
+        stock: 15,
+        qualityPoints: {
+          allSeasonTire: {
+            label: "All Season Tire",
+            icon: <BsCloudSun />,
           },
           warranty: {
-            w1: {
-              topicsw: "Full Warranty",
-              paragraphw:
-                "2-year warranty covering engine and electrical components.",
-            },
-            w2: {
-              topicsw: "Roadside Assistance",
-              paragraphw: "Free 1-year roadside assistance for breakdowns.",
-            },
-            w3: {
-              topicsw: "Battery Warranty",
-              paragraphw:
-                "6-month battery warranty for defects under normal usage.",
-            },
+            label: "90km Warranty",
+            icon: <PiMedalLight />,
           },
-          specification: {
-            s1: { topic: "Engine Displacement", parag: "72cc" },
-            s2: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
-            s3: { topic: "Max Torque", parag: "6.0 Nm @ 6,500 rpm" },
-            s4: { topic: "Lubrication", parag: "Wet sump" },
-            s5: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
-            s6: { topic: "Front Suspension", parag: "Telescopic" },
-            s7: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
-            s8: { topic: "Kerb Weight", parag: "100 kg" },
-            s9: { topic: "Top Speed", parag: "90 km/h" },
-            s10: { topic: "Ground Clearance", parag: "165 mm" },
+          speed: {
+            label: "5PMSF",
+            icon: <LuMountain />,
           },
         },
+        tireFeature: {
+          s1: {
+            topic: "Optimized Cornering Grip",
+            parag: "Ensures stability and safety during sharp turns.",
+          },
+          s2: {
+            topic: "All-Terrain Capability",
+            parag: "Performs well on both highways and rough roads.",
+          },
+          s3: {
+            topic: "Energy-Efficient Compound",
+            parag: "Minimizes energy loss, improving fuel economy.",
+          },
+          s4: {
+            topic: "Durable and Reliable",
+            parag: "Constructed with high-quality materials for extended life.",
+          },
+          s5: {
+            topic: "Comfort-First Approach",
+            parag: "Designed to absorb shocks for a smoother ride.",
+          },
+        },
+        WarrantiesGuarantees: {
+          p1: {
+            topic: "Flat Tire Repair Coverage",
+            para: "Includes free flat tire repair for the life of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Return Policy",
+            para: "Eligible for return or exchange within 30 days. Exclusions apply.",
+          },
+          p3: {
+            topic: "Lifetime Road Hazard Warranty",
+            para: "Protects against road-related damages for the life of the tire. Exclusions apply.",
+          },
+        },
+        warranty: {
+          w1: {
+            topicsw: "Full Warranty",
+            paragraphw:
+              "2-year warranty covering engine and electrical components.",
+          },
+          w2: {
+            topicsw: "Roadside Assistance",
+            paragraphw: "Free 1-year roadside assistance for breakdowns.",
+          },
+          w3: {
+            topicsw: "Battery Warranty",
+            paragraphw:
+              "6-month battery warranty for defects under normal usage.",
+          },
+        },
+        specification: {
+          s1: { topic: "Engine Displacement", parag: "72cc" },
+          s2: { topic: "Max Power", parag: "5.5 hp @ 8,000 rpm" },
+          s3: { topic: "Max Torque", parag: "6.0 Nm @ 6,500 rpm" },
+          s4: { topic: "Lubrication", parag: "Wet sump" },
+          s5: { topic: "Fuel Tank Capacity", parag: "3.5 liters" },
+          s6: { topic: "Front Suspension", parag: "Telescopic" },
+          s7: { topic: "Rear Suspension", parag: "Twin shock absorbers" },
+          s8: { topic: "Kerb Weight", parag: "100 kg" },
+          s9: { topic: "Top Speed", parag: "90 km/h" },
+          s10: { topic: "Ground Clearance", parag: "165 mm" },
+        },
+      },
     ],
     CG125: [
       {
@@ -1326,16 +1769,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Enhanced Stability", parag: "Provides excellent stability for high-speed rides." },
-          s2: { topic: "Durable Construction", parag: "Engineered for long-lasting performance on all terrains." },
-          s3: { topic: "Superior Grip", parag: "Offers exceptional traction on both wet and dry surfaces." },
-          s4: { topic: "Fuel-Efficient Design", parag: "Reduces rolling resistance for improved fuel efficiency." },
-          s5: { topic: "Smooth Handling", parag: "Ensures precise and responsive control during rides." },
+          s1: {
+            topic: "Enhanced Stability",
+            parag: "Provides excellent stability for high-speed rides.",
+          },
+          s2: {
+            topic: "Durable Construction",
+            parag: "Engineered for long-lasting performance on all terrains.",
+          },
+          s3: {
+            topic: "Superior Grip",
+            parag: "Offers exceptional traction on both wet and dry surfaces.",
+          },
+          s4: {
+            topic: "Fuel-Efficient Design",
+            parag: "Reduces rolling resistance for improved fuel efficiency.",
+          },
+          s5: {
+            topic: "Smooth Handling",
+            parag: "Ensures precise and responsive control during rides.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Tread Life Warranty", para: "Covers up to 50,000 miles of treadwear. Exclusions apply." },
-          p2: { topic: "30-Day Ride Guarantee", para: "Return or exchange if unsatisfied within 30 days. Exclusions apply." },
-          p3: { topic: "Puncture Protection Warranty", para: "Covers repair or replacement for punctured tires. Exclusions apply." },
+          p1: {
+            topic: "Tread Life Warranty",
+            para: "Covers up to 50,000 miles of treadwear. Exclusions apply.",
+          },
+          p2: {
+            topic: "30-Day Ride Guarantee",
+            para: "Return or exchange if unsatisfied within 30 days. Exclusions apply.",
+          },
+          p3: {
+            topic: "Puncture Protection Warranty",
+            para: "Covers repair or replacement for punctured tires. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1401,16 +1868,41 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "All-Weather Performance", parag: "Delivers reliable performance in both summer and winter conditions." },
-          s2: { topic: "Noise Reduction Technology", parag: "Minimizes road noise for a quiet ride." },
-          s3: { topic: "Long-Lasting Tread", parag: "Built to withstand wear and tear for extended use." },
-          s4: { topic: "Optimized Water Dispersion", parag: "Reduces hydroplaning risk by efficiently channeling water." },
-          s5: { topic: "Rugged Design", parag: "Ideal for tough road conditions and off-road performance." },
+          s1: {
+            topic: "All-Weather Performance",
+            parag:
+              "Delivers reliable performance in both summer and winter conditions.",
+          },
+          s2: {
+            topic: "Noise Reduction Technology",
+            parag: "Minimizes road noise for a quiet ride.",
+          },
+          s3: {
+            topic: "Long-Lasting Tread",
+            parag: "Built to withstand wear and tear for extended use.",
+          },
+          s4: {
+            topic: "Optimized Water Dispersion",
+            parag: "Reduces hydroplaning risk by efficiently channeling water.",
+          },
+          s5: {
+            topic: "Rugged Design",
+            parag: "Ideal for tough road conditions and off-road performance.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Limited Mileage Warranty", para: "Covers up to 60,000 miles of tread life. Exclusions apply." },
-          p2: { topic: "Road Hazard Coverage", para: "Protects against accidental damages like cuts and impacts. Exclusions apply." },
-          p3: { topic: "Satisfaction Guarantee", para: "Refund or replacement if not satisfied within 45 days. Exclusions apply." },
+          p1: {
+            topic: "Limited Mileage Warranty",
+            para: "Covers up to 60,000 miles of tread life. Exclusions apply.",
+          },
+          p2: {
+            topic: "Road Hazard Coverage",
+            para: "Protects against accidental damages like cuts and impacts. Exclusions apply.",
+          },
+          p3: {
+            topic: "Satisfaction Guarantee",
+            para: "Refund or replacement if not satisfied within 45 days. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1475,16 +1967,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Exceptional Durability", parag: "Designed to endure heavy loads and tough road conditions." },
-          s2: { topic: "High-Speed Safety", parag: "Maintains stability and control at high speeds." },
-          s3: { topic: "Comfort-Focused Design", parag: "Absorbs road vibrations for a smooth and comfortable ride." },
-          s4: { topic: "Eco-Friendly Materials", parag: "Constructed using sustainable raw materials." },
-          s5: { topic: "Extended Tread Life", parag: "Engineered to last longer with improved wear resistance." },
+          s1: {
+            topic: "Exceptional Durability",
+            parag: "Designed to endure heavy loads and tough road conditions.",
+          },
+          s2: {
+            topic: "High-Speed Safety",
+            parag: "Maintains stability and control at high speeds.",
+          },
+          s3: {
+            topic: "Comfort-Focused Design",
+            parag: "Absorbs road vibrations for a smooth and comfortable ride.",
+          },
+          s4: {
+            topic: "Eco-Friendly Materials",
+            parag: "Constructed using sustainable raw materials.",
+          },
+          s5: {
+            topic: "Extended Tread Life",
+            parag: "Engineered to last longer with improved wear resistance.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Treadwear Protection", para: "Guarantees tread performance for the life of the tire. Exclusions apply." },
-          p2: { topic: "Flat Tire Assistance", para: "Includes free flat tire repair for eligible customers. Exclusions apply." },
-          p3: { topic: "Performance Warranty", para: "Ensures reliable performance for up to 70,000 miles. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Treadwear Protection",
+            para: "Guarantees tread performance for the life of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Flat Tire Assistance",
+            para: "Includes free flat tire repair for eligible customers. Exclusions apply.",
+          },
+          p3: {
+            topic: "Performance Warranty",
+            para: "Ensures reliable performance for up to 70,000 miles. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1544,16 +2060,42 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Advanced Cornering Grip", parag: "Provides excellent grip for sharp turns and curves." },
-          s2: { topic: "Shock Absorption", parag: "Reduces the impact of road bumps for a smoother experience." },
-          s3: { topic: "Low Rolling Resistance", parag: "Improves fuel efficiency and reduces energy loss." },
-          s4: { topic: "Weather Adaptability", parag: "Performs consistently across a wide range of temperatures." },
-          s5: { topic: "Optimized Traction", parag: "Offers improved grip on slippery surfaces for added safety." },
+          s1: {
+            topic: "Advanced Cornering Grip",
+            parag: "Provides excellent grip for sharp turns and curves.",
+          },
+          s2: {
+            topic: "Shock Absorption",
+            parag:
+              "Reduces the impact of road bumps for a smoother experience.",
+          },
+          s3: {
+            topic: "Low Rolling Resistance",
+            parag: "Improves fuel efficiency and reduces energy loss.",
+          },
+          s4: {
+            topic: "Weather Adaptability",
+            parag: "Performs consistently across a wide range of temperatures.",
+          },
+          s5: {
+            topic: "Optimized Traction",
+            parag:
+              "Offers improved grip on slippery surfaces for added safety.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Comprehensive Mileage Warranty", para: "Backed for up to 55,000 miles of usage. Exclusions apply." },
-          p2: { topic: "Noise-Free Ride Guarantee", para: "Covers replacement if excessive noise persists. Exclusions apply." },
-          p3: { topic: "Roadside Assistance Warranty", para: "Includes emergency roadside assistance for tire-related issues. Exclusions apply." },
+          p1: {
+            topic: "Comprehensive Mileage Warranty",
+            para: "Backed for up to 55,000 miles of usage. Exclusions apply.",
+          },
+          p2: {
+            topic: "Noise-Free Ride Guarantee",
+            para: "Covers replacement if excessive noise persists. Exclusions apply.",
+          },
+          p3: {
+            topic: "Roadside Assistance Warranty",
+            para: "Includes emergency roadside assistance for tire-related issues. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1613,16 +2155,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "High-Speed Stability", parag: "Ensures smooth and safe rides at higher speeds." },
-          s2: { topic: "Urban Terrain Optimization", parag: "Perfectly suited for city roads and urban conditions." },
-          s3: { topic: "Rugged Durability", parag: "Tough enough for off-road adventures and harsh terrains." },
-          s4: { topic: "Fuel-Efficient Performance", parag: "Optimized for lower fuel consumption during long rides." },
-          s5: { topic: "Noise Reduction Design", parag: "Reduces cabin noise for a more enjoyable ride." },
+          s1: {
+            topic: "High-Speed Stability",
+            parag: "Ensures smooth and safe rides at higher speeds.",
+          },
+          s2: {
+            topic: "Urban Terrain Optimization",
+            parag: "Perfectly suited for city roads and urban conditions.",
+          },
+          s3: {
+            topic: "Rugged Durability",
+            parag: "Tough enough for off-road adventures and harsh terrains.",
+          },
+          s4: {
+            topic: "Fuel-Efficient Performance",
+            parag: "Optimized for lower fuel consumption during long rides.",
+          },
+          s5: {
+            topic: "Noise Reduction Design",
+            parag: "Reduces cabin noise for a more enjoyable ride.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Defect Warranty", para: "Covers manufacturing defects for the lifetime of the tire. Exclusions apply." },
-          p2: { topic: "Extended Performance Coverage", para: "Guaranteed performance for up to 75,000 miles. Exclusions apply." },
-          p3: { topic: "Hazard Protection Warranty", para: "Includes coverage against road hazards and accidental damage. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Defect Warranty",
+            para: "Covers manufacturing defects for the lifetime of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Extended Performance Coverage",
+            para: "Guaranteed performance for up to 75,000 miles. Exclusions apply.",
+          },
+          p3: {
+            topic: "Hazard Protection Warranty",
+            para: "Includes coverage against road hazards and accidental damage. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1682,16 +2248,41 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Optimized Weight Distribution", parag: "Improves balance and reduces uneven tread wear." },
-          s2: { topic: "High Traction Control", parag: "Provides superior control in challenging driving conditions." },
-          s3: { topic: "Adaptable Design", parag: "Performs well across different road types and surfaces." },
-          s4: { topic: "Comfort and Control", parag: "Ensures a quiet and smooth riding experience." },
-          s5: { topic: "Advanced Water Dispersion", parag: "Minimizes hydroplaning with efficient water channeling." },
+          s1: {
+            topic: "Optimized Weight Distribution",
+            parag: "Improves balance and reduces uneven tread wear.",
+          },
+          s2: {
+            topic: "High Traction Control",
+            parag:
+              "Provides superior control in challenging driving conditions.",
+          },
+          s3: {
+            topic: "Adaptable Design",
+            parag: "Performs well across different road types and surfaces.",
+          },
+          s4: {
+            topic: "Comfort and Control",
+            parag: "Ensures a quiet and smooth riding experience.",
+          },
+          s5: {
+            topic: "Advanced Water Dispersion",
+            parag: "Minimizes hydroplaning with efficient water channeling.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Flat Repair Coverage", para: "Covers flat tire repairs for the life of the tire. Exclusions apply." },
-          p2: { topic: "Satisfaction Policy", para: "Eligible for return or exchange within 30 days of purchase. Exclusions apply." },
-          p3: { topic: "Lifetime Hazard Warranty", para: "Protects against damages caused by road hazards. Exclusions apply." },
+          p1: {
+            topic: "Flat Repair Coverage",
+            para: "Covers flat tire repairs for the life of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Policy",
+            para: "Eligible for return or exchange within 30 days of purchase. Exclusions apply.",
+          },
+          p3: {
+            topic: "Lifetime Hazard Warranty",
+            para: "Protects against damages caused by road hazards. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1750,16 +2341,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Enhanced Cornering Control", parag: "Designed to provide exceptional stability and control during sharp turns." },
-          s2: { topic: "Durable Performance", parag: "Built with a tough compound for long-lasting use on diverse terrains." },
-          s3: { topic: "High-Speed Endurance", parag: "Engineered to maintain performance at high speeds with minimal wear." },
-          s4: { topic: "Fuel-Saving Design", parag: "Optimized for reduced rolling resistance, improving fuel efficiency." },
-          s5: { topic: "Superior Wet Grip", parag: "Provides excellent traction on wet surfaces, enhancing safety." },
+          s1: {
+            topic: "Enhanced Cornering Control",
+            parag:
+              "Designed to provide exceptional stability and control during sharp turns.",
+          },
+          s2: {
+            topic: "Durable Performance",
+            parag:
+              "Built with a tough compound for long-lasting use on diverse terrains.",
+          },
+          s3: {
+            topic: "High-Speed Endurance",
+            parag:
+              "Engineered to maintain performance at high speeds with minimal wear.",
+          },
+          s4: {
+            topic: "Fuel-Saving Design",
+            parag:
+              "Optimized for reduced rolling resistance, improving fuel efficiency.",
+          },
+          s5: {
+            topic: "Superior Wet Grip",
+            parag:
+              "Provides excellent traction on wet surfaces, enhancing safety.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Tread Life Protection", para: "Backed by a warranty covering up to 55,000 miles. Exclusions apply." },
-          p2: { topic: "30-Day Satisfaction Guarantee", para: "Eligible for return or exchange if unsatisfied within 30 days. Exclusions apply." },
-          p3: { topic: "Road Hazard Coverage", para: "Covers damages from potholes, debris, and accidental impacts. Exclusions apply." },
+          p1: {
+            topic: "Tread Life Protection",
+            para: "Backed by a warranty covering up to 55,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "30-Day Satisfaction Guarantee",
+            para: "Eligible for return or exchange if unsatisfied within 30 days. Exclusions apply.",
+          },
+          p3: {
+            topic: "Road Hazard Coverage",
+            para: "Covers damages from potholes, debris, and accidental impacts. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1825,16 +2445,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "All-Weather Adaptability", parag: "Performs well in hot, cold, wet, or dry conditions." },
-          s2: { topic: "Noise Dampening Technology", parag: "Reduces road noise for a quieter and more enjoyable ride." },
-          s3: { topic: "Improved Mileage", parag: "Extended tread life ensures more miles per tire." },
-          s4: { topic: "Enhanced Traction", parag: "Specially designed grooves improve grip on all surfaces." },
-          s5: { topic: "Comfort-Driven Design", parag: "Minimizes road vibrations for a smoother ride experience." },
+          s1: {
+            topic: "All-Weather Adaptability",
+            parag: "Performs well in hot, cold, wet, or dry conditions.",
+          },
+          s2: {
+            topic: "Noise Dampening Technology",
+            parag: "Reduces road noise for a quieter and more enjoyable ride.",
+          },
+          s3: {
+            topic: "Improved Mileage",
+            parag: "Extended tread life ensures more miles per tire.",
+          },
+          s4: {
+            topic: "Enhanced Traction",
+            parag: "Specially designed grooves improve grip on all surfaces.",
+          },
+          s5: {
+            topic: "Comfort-Driven Design",
+            parag: "Minimizes road vibrations for a smoother ride experience.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Mileage Warranty", para: "Guarantees up to 60,000 miles of treadwear. Exclusions apply." },
-          p2: { topic: "Flat Tire Assistance", para: "Covers repair or replacement for flat tires. Exclusions apply." },
-          p3: { topic: "Performance Guarantee", para: "Ensures reliable performance for high-speed rides. Exclusions apply." },
+          p1: {
+            topic: "Mileage Warranty",
+            para: "Guarantees up to 60,000 miles of treadwear. Exclusions apply.",
+          },
+          p2: {
+            topic: "Flat Tire Assistance",
+            para: "Covers repair or replacement for flat tires. Exclusions apply.",
+          },
+          p3: {
+            topic: "Performance Guarantee",
+            para: "Ensures reliable performance for high-speed rides. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1905,16 +2549,43 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Advanced Durability", parag: "Constructed to withstand tough road conditions and heavy loads." },
-          s2: { topic: "High-Speed Stability", parag: "Offers precise control even at higher speeds." },
-          s3: { topic: "Extended Treadwear", parag: "Resistant to wear and tear, lasting longer than standard tires." },
-          s4: { topic: "Eco-Friendly Materials", parag: "Made with sustainable compounds to reduce environmental impact." },
-          s5: { topic: "Optimized Weight Distribution", parag: "Improves balance and prevents uneven tread wear." },
+          s1: {
+            topic: "Advanced Durability",
+            parag:
+              "Constructed to withstand tough road conditions and heavy loads.",
+          },
+          s2: {
+            topic: "High-Speed Stability",
+            parag: "Offers precise control even at higher speeds.",
+          },
+          s3: {
+            topic: "Extended Treadwear",
+            parag:
+              "Resistant to wear and tear, lasting longer than standard tires.",
+          },
+          s4: {
+            topic: "Eco-Friendly Materials",
+            parag:
+              "Made with sustainable compounds to reduce environmental impact.",
+          },
+          s5: {
+            topic: "Optimized Weight Distribution",
+            parag: "Improves balance and prevents uneven tread wear.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Defect Warranty", para: "Protects against manufacturing defects for the life of the tire. Exclusions apply." },
-          p2: { topic: "Hazard Warranty", para: "Includes coverage for road hazard-related damages. Exclusions apply." },
-          p3: { topic: "Satisfaction Guarantee", para: "Eligible for return or replacement within 45 days. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Defect Warranty",
+            para: "Protects against manufacturing defects for the life of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Hazard Warranty",
+            para: "Includes coverage for road hazard-related damages. Exclusions apply.",
+          },
+          p3: {
+            topic: "Satisfaction Guarantee",
+            para: "Eligible for return or replacement within 45 days. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -1969,16 +2640,42 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Exceptional Grip", parag: "Provides top-notch grip on wet and uneven surfaces for safer rides." },
-          s2: { topic: "Shock Absorption", parag: "Reduces the impact of bumps and potholes for a smoother journey." },
-          s3: { topic: "Low Rolling Resistance", parag: "Improves fuel efficiency and reduces energy loss." },
-          s4: { topic: "Weather Resilience", parag: "Maintains performance in extreme weather conditions." },
-          s5: { topic: "Precision Handling", parag: "Offers accurate control and stability during maneuvering." },
+          s1: {
+            topic: "Exceptional Grip",
+            parag:
+              "Provides top-notch grip on wet and uneven surfaces for safer rides.",
+          },
+          s2: {
+            topic: "Shock Absorption",
+            parag:
+              "Reduces the impact of bumps and potholes for a smoother journey.",
+          },
+          s3: {
+            topic: "Low Rolling Resistance",
+            parag: "Improves fuel efficiency and reduces energy loss.",
+          },
+          s4: {
+            topic: "Weather Resilience",
+            parag: "Maintains performance in extreme weather conditions.",
+          },
+          s5: {
+            topic: "Precision Handling",
+            parag: "Offers accurate control and stability during maneuvering.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Mileage Coverage", para: "Tread performance warranty for up to 50,000 miles. Exclusions apply." },
-          p2: { topic: "Noise-Free Guarantee", para: "Replacement if excessive noise is detected. Exclusions apply." },
-          p3: { topic: "Flat Repair Warranty", para: "Covers repair for flat tires for the life of the tire. Exclusions apply." },
+          p1: {
+            topic: "Mileage Coverage",
+            para: "Tread performance warranty for up to 50,000 miles. Exclusions apply.",
+          },
+          p2: {
+            topic: "Noise-Free Guarantee",
+            para: "Replacement if excessive noise is detected. Exclusions apply.",
+          },
+          p3: {
+            topic: "Flat Repair Warranty",
+            para: "Covers repair for flat tires for the life of the tire. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2041,16 +2738,43 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Fuel-Efficient Build", parag: "Engineered to save fuel without compromising performance." },
-          s2: { topic: "Urban Terrain Ready", parag: "Optimized for city streets and smooth rides in urban settings." },
-          s3: { topic: "Rugged Design", parag: "Perfect for off-road adventures and challenging road conditions." },
-          s4: { topic: "Superior Water Dispersion", parag: "Reduces the risk of hydroplaning with advanced tread design." },
-          s5: { topic: "Comfort-Oriented", parag: "Designed for reduced road noise and vibrations." },
+          s1: {
+            topic: "Fuel-Efficient Build",
+            parag: "Engineered to save fuel without compromising performance.",
+          },
+          s2: {
+            topic: "Urban Terrain Ready",
+            parag:
+              "Optimized for city streets and smooth rides in urban settings.",
+          },
+          s3: {
+            topic: "Rugged Design",
+            parag:
+              "Perfect for off-road adventures and challenging road conditions.",
+          },
+          s4: {
+            topic: "Superior Water Dispersion",
+            parag:
+              "Reduces the risk of hydroplaning with advanced tread design.",
+          },
+          s5: {
+            topic: "Comfort-Oriented",
+            parag: "Designed for reduced road noise and vibrations.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Comprehensive Defect Warranty", para: "Covers all manufacturing defects for the lifetime of the tire. Exclusions apply." },
-          p2: { topic: "Performance Warranty", para: "Guaranteed performance for up to 65,000 miles. Exclusions apply." },
-          p3: { topic: "Roadside Assistance", para: "Includes emergency roadside services for tire-related issues. Exclusions apply." },
+          p1: {
+            topic: "Comprehensive Defect Warranty",
+            para: "Covers all manufacturing defects for the lifetime of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Performance Warranty",
+            para: "Guaranteed performance for up to 65,000 miles. Exclusions apply.",
+          },
+          p3: {
+            topic: "Roadside Assistance",
+            para: "Includes emergency roadside services for tire-related issues. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2109,16 +2833,40 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Advanced Weight Optimization", parag: "Balances weight distribution to ensure even treadwear." },
-          s2: { topic: "Traction Control", parag: "Provides superior grip in all road conditions." },
-          s3: { topic: "Adaptable Tread Design", parag: "Performs equally well on paved and unpaved surfaces." },
-          s4: { topic: "Smooth Ride Experience", parag: "Minimizes vibrations and enhances comfort." },
-          s5: { topic: "Water Repellent Design", parag: "Ensures safety with optimized water channeling." },
+          s1: {
+            topic: "Advanced Weight Optimization",
+            parag: "Balances weight distribution to ensure even treadwear.",
+          },
+          s2: {
+            topic: "Traction Control",
+            parag: "Provides superior grip in all road conditions.",
+          },
+          s3: {
+            topic: "Adaptable Tread Design",
+            parag: "Performs equally well on paved and unpaved surfaces.",
+          },
+          s4: {
+            topic: "Smooth Ride Experience",
+            parag: "Minimizes vibrations and enhances comfort.",
+          },
+          s5: {
+            topic: "Water Repellent Design",
+            parag: "Ensures safety with optimized water channeling.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Treadwear Warranty", para: "Protects against uneven treadwear for the life of the tire. Exclusions apply." },
-          p2: { topic: "Satisfaction Policy", para: "Return or exchange within 30 days if unsatisfied. Exclusions apply." },
-          p3: { topic: "Hazard Protection Warranty", para: "Covers damages caused by road hazards like debris and potholes. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Treadwear Warranty",
+            para: "Protects against uneven treadwear for the life of the tire. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Policy",
+            para: "Return or exchange within 30 days if unsatisfied. Exclusions apply.",
+          },
+          p3: {
+            topic: "Hazard Protection Warranty",
+            para: "Covers damages caused by road hazards like debris and potholes. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2179,16 +2927,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Enhanced Stability", parag: "Engineered for superior stability and balance, offering great control on varied terrains." },
-          s2: { topic: "Long-Lasting Durability", parag: "Crafted with durable materials for a long service life, even under heavy use." },
-          s3: { topic: "All-Terrain Performance", parag: "Designed for optimal traction on both city roads and light off-road conditions." },
-          s4: { topic: "Smooth and Quiet Ride", parag: "The advanced rubber compound minimizes road noise, delivering a comfortable and quiet ride." },
-          s5: { topic: "Improved Grip", parag: "Delivers superior traction and handling for increased safety in both wet and dry conditions." },
+          s1: {
+            topic: "Enhanced Stability",
+            parag:
+              "Engineered for superior stability and balance, offering great control on varied terrains.",
+          },
+          s2: {
+            topic: "Long-Lasting Durability",
+            parag:
+              "Crafted with durable materials for a long service life, even under heavy use.",
+          },
+          s3: {
+            topic: "All-Terrain Performance",
+            parag:
+              "Designed for optimal traction on both city roads and light off-road conditions.",
+          },
+          s4: {
+            topic: "Smooth and Quiet Ride",
+            parag:
+              "The advanced rubber compound minimizes road noise, delivering a comfortable and quiet ride.",
+          },
+          s5: {
+            topic: "Improved Grip",
+            parag:
+              "Delivers superior traction and handling for increased safety in both wet and dry conditions.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Limited Tread Life Warranty", para: "Covered for up to 55,000 miles of use. Terms and exclusions apply." },
-          p2: { topic: "Satisfaction Guarantee", para: "30-day return or exchange period for customer satisfaction." },
-          p3: { topic: "Road Hazard Warranty", para: "Protection against road hazards like nails or potholes, with exclusions for severe impacts." },
+          p1: {
+            topic: "Limited Tread Life Warranty",
+            para: "Covered for up to 55,000 miles of use. Terms and exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "30-day return or exchange period for customer satisfaction.",
+          },
+          p3: {
+            topic: "Road Hazard Warranty",
+            para: "Protection against road hazards like nails or potholes, with exclusions for severe impacts.",
+          },
         },
         warranty: {
           w1: {
@@ -2231,7 +3008,7 @@ function ThemeProvider({ children }) {
         },
       },
       {
-        image: CB1254 ,
+        image: CB1254,
         name: "CG125 Special Comfort Plus",
         price: 2700,
         size: "2.75-17",
@@ -2254,16 +3031,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "High-Performance Tread", parag: "Optimized for grip and performance, allowing excellent traction in a variety of conditions." },
-          s2: { topic: "Durable Construction", parag: "Made with advanced tire technology, offering high resistance to wear and tear." },
-          s3: { topic: "Comfortable and Stable Ride", parag: "Designed to provide a smooth ride even on rough or uneven roads." },
-          s4: { topic: "Excellent Wet Performance", parag: "The tire's advanced rubber compound ensures excellent traction on wet and slippery surfaces." },
-          s5: { topic: "Fuel Efficiency", parag: "Reduces rolling resistance, improving fuel economy for your bike." },
+          s1: {
+            topic: "High-Performance Tread",
+            parag:
+              "Optimized for grip and performance, allowing excellent traction in a variety of conditions.",
+          },
+          s2: {
+            topic: "Durable Construction",
+            parag:
+              "Made with advanced tire technology, offering high resistance to wear and tear.",
+          },
+          s3: {
+            topic: "Comfortable and Stable Ride",
+            parag:
+              "Designed to provide a smooth ride even on rough or uneven roads.",
+          },
+          s4: {
+            topic: "Excellent Wet Performance",
+            parag:
+              "The tire's advanced rubber compound ensures excellent traction on wet and slippery surfaces.",
+          },
+          s5: {
+            topic: "Fuel Efficiency",
+            parag:
+              "Reduces rolling resistance, improving fuel economy for your bike.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Mileage Warranty", para: "Guaranteed for up to 50,000 miles, ensuring long-lasting performance." },
-          p2: { topic: "Defect-Free Guarantee", para: "Free replacement within 90 days if any manufacturing defects are detected." },
-          p3: { topic: "Hazard Protection", para: "Coverage for damage caused by road hazards like debris or potholes." },
+          p1: {
+            topic: "Mileage Warranty",
+            para: "Guaranteed for up to 50,000 miles, ensuring long-lasting performance.",
+          },
+          p2: {
+            topic: "Defect-Free Guarantee",
+            para: "Free replacement within 90 days if any manufacturing defects are detected.",
+          },
+          p3: {
+            topic: "Hazard Protection",
+            para: "Coverage for damage caused by road hazards like debris or potholes.",
+          },
         },
         warranty: {
           w1: {
@@ -2331,16 +3137,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "All-Weather Performance", parag: "Designed for optimal performance in both dry and wet conditions, ensuring all-season reliability." },
-          s2: { topic: "Resilient Construction", parag: "Built with a tough rubber compound to withstand harsh riding conditions and minimize wear." },
-          s3: { topic: "Quiet and Smooth Ride", parag: "Incorporates technology to reduce road noise for a quieter, more enjoyable ride." },
-          s4: { topic: "Enhanced Cornering", parag: "Provides superior cornering stability, giving you more confidence when navigating turns." },
-          s5: { topic: "Low Rolling Resistance", parag: "Minimizes energy loss, contributing to better fuel efficiency and a smoother ride." },
+          s1: {
+            topic: "All-Weather Performance",
+            parag:
+              "Designed for optimal performance in both dry and wet conditions, ensuring all-season reliability.",
+          },
+          s2: {
+            topic: "Resilient Construction",
+            parag:
+              "Built with a tough rubber compound to withstand harsh riding conditions and minimize wear.",
+          },
+          s3: {
+            topic: "Quiet and Smooth Ride",
+            parag:
+              "Incorporates technology to reduce road noise for a quieter, more enjoyable ride.",
+          },
+          s4: {
+            topic: "Enhanced Cornering",
+            parag:
+              "Provides superior cornering stability, giving you more confidence when navigating turns.",
+          },
+          s5: {
+            topic: "Low Rolling Resistance",
+            parag:
+              "Minimizes energy loss, contributing to better fuel efficiency and a smoother ride.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Warranty", para: "Guaranteed to last the full service life of the tire, excluding damages caused by misuse." },
-          p2: { topic: "Customer Satisfaction", para: "Return or exchange the tire within 30 days if you’re not completely satisfied." },
-          p3: { topic: "Road Hazard Coverage", para: "Includes protection against road hazards such as glass, nails, and debris." },
+          p1: {
+            topic: "Lifetime Warranty",
+            para: "Guaranteed to last the full service life of the tire, excluding damages caused by misuse.",
+          },
+          p2: {
+            topic: "Customer Satisfaction",
+            para: "Return or exchange the tire within 30 days if you’re not completely satisfied.",
+          },
+          p3: {
+            topic: "Road Hazard Coverage",
+            para: "Includes protection against road hazards such as glass, nails, and debris.",
+          },
         },
         warranty: {
           w1: {
@@ -2398,16 +3233,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Durable Rubber Compound", parag: "Uses a specialized compound that resists abrasion and enhances tire life, even in challenging conditions." },
-          s2: { topic: "Balanced Performance", parag: "Engineered to balance comfort, performance, and fuel efficiency for all types of riders." },
-          s3: { topic: "Improved Wet Traction", parag: "Delivers excellent grip even in rainy or wet conditions to ensure a safer ride." },
-          s4: { topic: "Reinforced Sidewalls", parag: "Reinforced with additional strength to resist punctures and offer better durability." },
-          s5: { topic: "Responsive Handling", parag: "Provides agile handling and precise control, making it ideal for both city and highway rides." },
+          s1: {
+            topic: "Durable Rubber Compound",
+            parag:
+              "Uses a specialized compound that resists abrasion and enhances tire life, even in challenging conditions.",
+          },
+          s2: {
+            topic: "Balanced Performance",
+            parag:
+              "Engineered to balance comfort, performance, and fuel efficiency for all types of riders.",
+          },
+          s3: {
+            topic: "Improved Wet Traction",
+            parag:
+              "Delivers excellent grip even in rainy or wet conditions to ensure a safer ride.",
+          },
+          s4: {
+            topic: "Reinforced Sidewalls",
+            parag:
+              "Reinforced with additional strength to resist punctures and offer better durability.",
+          },
+          s5: {
+            topic: "Responsive Handling",
+            parag:
+              "Provides agile handling and precise control, making it ideal for both city and highway rides.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Tire Lifespan Guarantee", para: "Guaranteed for up to 60,000 miles, ensuring dependable service for years." },
-          p2: { topic: "Satisfaction Guarantee", para: "30-day return policy for a full refund or exchange if you are not satisfied." },
-          p3: { topic: "Road Hazard Warranty", para: "Protection for damage caused by road hazards such as sharp objects or rough terrain." },
+          p1: {
+            topic: "Tire Lifespan Guarantee",
+            para: "Guaranteed for up to 60,000 miles, ensuring dependable service for years.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "30-day return policy for a full refund or exchange if you are not satisfied.",
+          },
+          p3: {
+            topic: "Road Hazard Warranty",
+            para: "Protection for damage caused by road hazards such as sharp objects or rough terrain.",
+          },
         },
         warranty: {
           w1: {
@@ -2469,16 +3333,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Advanced Tread Design", parag: "Specially engineered tread pattern for superior grip and stability on various surfaces." },
-          s2: { topic: "Superior Traction", parag: "Provides exceptional traction, even on slippery or uneven surfaces." },
-          s3: { topic: "Long-Lasting Performance", parag: "Durable construction designed to last through tough conditions and long rides." },
-          s4: { topic: "Comfort and Control", parag: "Maximizes comfort without sacrificing handling or performance, even on long trips." },
-          s5: { topic: "Eco-Friendly Materials", parag: "Made using sustainable materials to minimize the environmental impact." },
+          s1: {
+            topic: "Advanced Tread Design",
+            parag:
+              "Specially engineered tread pattern for superior grip and stability on various surfaces.",
+          },
+          s2: {
+            topic: "Superior Traction",
+            parag:
+              "Provides exceptional traction, even on slippery or uneven surfaces.",
+          },
+          s3: {
+            topic: "Long-Lasting Performance",
+            parag:
+              "Durable construction designed to last through tough conditions and long rides.",
+          },
+          s4: {
+            topic: "Comfort and Control",
+            parag:
+              "Maximizes comfort without sacrificing handling or performance, even on long trips.",
+          },
+          s5: {
+            topic: "Eco-Friendly Materials",
+            parag:
+              "Made using sustainable materials to minimize the environmental impact.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Road Hazard Warranty", para: "Protection against road hazards for up to 45,000 miles, ensuring peace of mind during your ride." },
-          p2: { topic: "Defect-Free Guarantee", para: "Free replacement for any defects found within the first 60 days of purchase." },
-          p3: { topic: "Performance Guarantee", para: "Guaranteed high performance and satisfaction throughout the tire’s life." },
+          p1: {
+            topic: "Road Hazard Warranty",
+            para: "Protection against road hazards for up to 45,000 miles, ensuring peace of mind during your ride.",
+          },
+          p2: {
+            topic: "Defect-Free Guarantee",
+            para: "Free replacement for any defects found within the first 60 days of purchase.",
+          },
+          p3: {
+            topic: "Performance Guarantee",
+            para: "Guaranteed high performance and satisfaction throughout the tire’s life.",
+          },
         },
         warranty: {
           w1: {
@@ -2542,16 +3435,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Improved Cornering Stability", parag: "Offers enhanced cornering capability, perfect for tight turns and winding roads." },
-          s2: { topic: "High-Speed Durability", parag: "Built to handle high-speed performance without compromising safety or control." },
-          s3: { topic: "Comfortable Ride", parag: "Incorporates technologies that reduce vibration and ensure a smooth ride over various terrains." },
-          s4: { topic: "High Traction and Grip", parag: "Delivers superior traction in wet, dry, and off-road conditions, providing more control." },
-          s5: { topic: "Reinforced Design", parag: "Designed to resist wear, punctures, and abrasions, making it suitable for long-distance riding." },
+          s1: {
+            topic: "Improved Cornering Stability",
+            parag:
+              "Offers enhanced cornering capability, perfect for tight turns and winding roads.",
+          },
+          s2: {
+            topic: "High-Speed Durability",
+            parag:
+              "Built to handle high-speed performance without compromising safety or control.",
+          },
+          s3: {
+            topic: "Comfortable Ride",
+            parag:
+              "Incorporates technologies that reduce vibration and ensure a smooth ride over various terrains.",
+          },
+          s4: {
+            topic: "High Traction and Grip",
+            parag:
+              "Delivers superior traction in wet, dry, and off-road conditions, providing more control.",
+          },
+          s5: {
+            topic: "Reinforced Design",
+            parag:
+              "Designed to resist wear, punctures, and abrasions, making it suitable for long-distance riding.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Limited Tread Life Warranty", para: "Guaranteed for 50,000 miles under normal conditions. Exclusions apply." },
-          p2: { topic: "Satisfaction Guarantee", para: "30-day return or exchange policy if you are not fully satisfied with your tire." },
-          p3: { topic: "Road Hazard Coverage", para: "Coverage for tire damage caused by road hazards, including glass, nails, and debris." },
+          p1: {
+            topic: "Limited Tread Life Warranty",
+            para: "Guaranteed for 50,000 miles under normal conditions. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "30-day return or exchange policy if you are not fully satisfied with your tire.",
+          },
+          p3: {
+            topic: "Road Hazard Coverage",
+            para: "Coverage for tire damage caused by road hazards, including glass, nails, and debris.",
+          },
         },
         warranty: {
           w1: {
@@ -2609,16 +3531,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "All-Weather Performance", parag: "Engineered for reliable performance in both wet and dry conditions." },
-          s2: { topic: "Durable Construction", parag: "Made with high-strength materials for long-lasting durability." },
-          s3: { topic: "Comfortable Ride", parag: "Designed to minimize vibrations and provide a smooth, enjoyable ride." },
-          s4: { topic: "Enhanced Traction", parag: "Provides superior grip for better control and stability on the road." },
-          s5: { topic: "Fuel Efficiency", parag: "Optimized to reduce rolling resistance, improving fuel economy." },
+          s1: {
+            topic: "All-Weather Performance",
+            parag:
+              "Engineered for reliable performance in both wet and dry conditions.",
+          },
+          s2: {
+            topic: "Durable Construction",
+            parag:
+              "Made with high-strength materials for long-lasting durability.",
+          },
+          s3: {
+            topic: "Comfortable Ride",
+            parag:
+              "Designed to minimize vibrations and provide a smooth, enjoyable ride.",
+          },
+          s4: {
+            topic: "Enhanced Traction",
+            parag:
+              "Provides superior grip for better control and stability on the road.",
+          },
+          s5: {
+            topic: "Fuel Efficiency",
+            parag:
+              "Optimized to reduce rolling resistance, improving fuel economy.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Limited Tread Life Warranty", para: "Up to 50,000 miles of coverage, ensuring long-lasting tire performance. Exclusions apply." },
-          p2: { topic: "Satisfaction Guarantee", para: "30-day return or exchange policy if unsatisfied with the tire's performance." },
-          p3: { topic: "Road Hazard Warranty", para: "Coverage for tire damage due to road hazards like debris or potholes. Exclusions apply." },
+          p1: {
+            topic: "Limited Tread Life Warranty",
+            para: "Up to 50,000 miles of coverage, ensuring long-lasting tire performance. Exclusions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "30-day return or exchange policy if unsatisfied with the tire's performance.",
+          },
+          p3: {
+            topic: "Road Hazard Warranty",
+            para: "Coverage for tire damage due to road hazards like debris or potholes. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2679,16 +3630,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "High-Performance Tread", parag: "Optimized tread pattern for superior grip and stability in various conditions." },
-          s2: { topic: "Resistant to Abrasion", parag: "The tire is built to withstand wear, providing a longer lifespan." },
-          s3: { topic: "Smooth Handling", parag: "Delivers smooth handling and reliable control even on tight turns." },
-          s4: { topic: "Versatile Road Usage", parag: "Performs well on both city streets and light off-road conditions." },
-          s5: { topic: "Noise Reduction Technology", parag: "Minimizes road noise for a quieter and more comfortable ride." },
+          s1: {
+            topic: "High-Performance Tread",
+            parag:
+              "Optimized tread pattern for superior grip and stability in various conditions.",
+          },
+          s2: {
+            topic: "Resistant to Abrasion",
+            parag:
+              "The tire is built to withstand wear, providing a longer lifespan.",
+          },
+          s3: {
+            topic: "Smooth Handling",
+            parag:
+              "Delivers smooth handling and reliable control even on tight turns.",
+          },
+          s4: {
+            topic: "Versatile Road Usage",
+            parag:
+              "Performs well on both city streets and light off-road conditions.",
+          },
+          s5: {
+            topic: "Noise Reduction Technology",
+            parag:
+              "Minimizes road noise for a quieter and more comfortable ride.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Mileage Warranty", para: "Guaranteed for up to 45,000 miles of use. Exclusions apply for extreme conditions." },
-          p2: { topic: "Defect-Free Guarantee", para: "Replacement or refund for any manufacturing defects within the first 60 days." },
-          p3: { topic: "Road Hazard Protection", para: "Includes coverage for damage from road hazards like nails and glass. Exclusions apply." },
+          p1: {
+            topic: "Mileage Warranty",
+            para: "Guaranteed for up to 45,000 miles of use. Exclusions apply for extreme conditions.",
+          },
+          p2: {
+            topic: "Defect-Free Guarantee",
+            para: "Replacement or refund for any manufacturing defects within the first 60 days.",
+          },
+          p3: {
+            topic: "Road Hazard Protection",
+            para: "Includes coverage for damage from road hazards like nails and glass. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2752,16 +3732,44 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Heavy-Duty Performance", parag: "Built to handle heavier loads and provide a stable ride." },
-          s2: { topic: "Improved Cornering", parag: "The tire offers better cornering performance for more agile handling." },
-          s3: { topic: "Long-Lasting Tread", parag: "With a specially formulated compound, the tire lasts longer while maintaining excellent performance." },
-          s4: { topic: "Eco-Friendly Materials", parag: "Made with sustainable materials, reducing environmental impact." },
-          s5: { topic: "Enhanced Wet Grip", parag: "Advanced rubber technology ensures excellent traction on wet surfaces, reducing the risk of hydroplaning." },
+          s1: {
+            topic: "Heavy-Duty Performance",
+            parag: "Built to handle heavier loads and provide a stable ride.",
+          },
+          s2: {
+            topic: "Improved Cornering",
+            parag:
+              "The tire offers better cornering performance for more agile handling.",
+          },
+          s3: {
+            topic: "Long-Lasting Tread",
+            parag:
+              "With a specially formulated compound, the tire lasts longer while maintaining excellent performance.",
+          },
+          s4: {
+            topic: "Eco-Friendly Materials",
+            parag:
+              "Made with sustainable materials, reducing environmental impact.",
+          },
+          s5: {
+            topic: "Enhanced Wet Grip",
+            parag:
+              "Advanced rubber technology ensures excellent traction on wet surfaces, reducing the risk of hydroplaning.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Lifetime Warranty", para: "Guaranteed to last for the full service life of the tire. Conditions apply." },
-          p2: { topic: "Satisfaction Guarantee", para: "30-day return or exchange period if not satisfied with tire performance." },
-          p3: { topic: "All-Weather Protection", para: "Coverage for all weather conditions, including extreme heat and cold. Exclusions apply." },
+          p1: {
+            topic: "Lifetime Warranty",
+            para: "Guaranteed to last for the full service life of the tire. Conditions apply.",
+          },
+          p2: {
+            topic: "Satisfaction Guarantee",
+            para: "30-day return or exchange period if not satisfied with tire performance.",
+          },
+          p3: {
+            topic: "All-Weather Protection",
+            para: "Coverage for all weather conditions, including extreme heat and cold. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2822,16 +3830,44 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Superior Grip", parag: "Designed for ultimate traction on both wet and dry roads." },
-          s2: { topic: "Optimized for Handling", parag: "Provides enhanced handling characteristics, especially in urban environments." },
-          s3: { topic: "Comfort and Stability", parag: "Minimizes vibrations and improves ride quality, especially over rough surfaces." },
-          s4: { topic: "Extended Wear", parag: "Offers long-lasting performance with wear-resistant materials." },
-          s5: { topic: "Quick Response", parag: "Responsive to steering and braking, enhancing safety and control." },
+          s1: {
+            topic: "Superior Grip",
+            parag: "Designed for ultimate traction on both wet and dry roads.",
+          },
+          s2: {
+            topic: "Optimized for Handling",
+            parag:
+              "Provides enhanced handling characteristics, especially in urban environments.",
+          },
+          s3: {
+            topic: "Comfort and Stability",
+            parag:
+              "Minimizes vibrations and improves ride quality, especially over rough surfaces.",
+          },
+          s4: {
+            topic: "Extended Wear",
+            parag:
+              "Offers long-lasting performance with wear-resistant materials.",
+          },
+          s5: {
+            topic: "Quick Response",
+            parag:
+              "Responsive to steering and braking, enhancing safety and control.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Performance Warranty", para: "Covers performance issues up to 50,000 miles. Terms and conditions apply." },
-          p2: { topic: "Road Hazard Warranty", para: "Covers damage from road hazards like potholes or sharp objects. Exclusions apply." },
-          p3: { topic: "Manufacturing Defects", para: "Replacement if manufacturing defects are found within the first 90 days." },
+          p1: {
+            topic: "Performance Warranty",
+            para: "Covers performance issues up to 50,000 miles. Terms and conditions apply.",
+          },
+          p2: {
+            topic: "Road Hazard Warranty",
+            para: "Covers damage from road hazards like potholes or sharp objects. Exclusions apply.",
+          },
+          p3: {
+            topic: "Manufacturing Defects",
+            para: "Replacement if manufacturing defects are found within the first 90 days.",
+          },
         },
         warranty: {
           w1: {
@@ -2893,16 +3929,43 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Responsive Traction", parag: "Delivers superior traction on both paved and gravel roads." },
-          s2: { topic: "Shock Absorption", parag: "Designed to absorb shocks for a smoother, more comfortable ride." },
-          s3: { topic: "All-Season Durability", parag: "Built to withstand varying temperatures and conditions year-round." },
-          s4: { topic: "Reinforced Sidewalls", parag: "Provides added protection against impacts and punctures." },
-          s5: { topic: "Improved Fuel Efficiency", parag: "Minimizes rolling resistance to improve overall fuel efficiency." },
+          s1: {
+            topic: "Responsive Traction",
+            parag: "Delivers superior traction on both paved and gravel roads.",
+          },
+          s2: {
+            topic: "Shock Absorption",
+            parag:
+              "Designed to absorb shocks for a smoother, more comfortable ride.",
+          },
+          s3: {
+            topic: "All-Season Durability",
+            parag:
+              "Built to withstand varying temperatures and conditions year-round.",
+          },
+          s4: {
+            topic: "Reinforced Sidewalls",
+            parag: "Provides added protection against impacts and punctures.",
+          },
+          s5: {
+            topic: "Improved Fuel Efficiency",
+            parag:
+              "Minimizes rolling resistance to improve overall fuel efficiency.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Tire Lifespan Warranty", para: "Guaranteed to last up to 60,000 miles under normal usage. Exclusions apply." },
-          p2: { topic: "Customer Satisfaction", para: "Return or exchange within 30 days if not satisfied with tire performance." },
-          p3: { topic: "Hazard Warranty", para: "Protects against damage caused by road hazards like glass or nails. Exclusions apply." },
+          p1: {
+            topic: "Tire Lifespan Warranty",
+            para: "Guaranteed to last up to 60,000 miles under normal usage. Exclusions apply.",
+          },
+          p2: {
+            topic: "Customer Satisfaction",
+            para: "Return or exchange within 30 days if not satisfied with tire performance.",
+          },
+          p3: {
+            topic: "Hazard Warranty",
+            para: "Protects against damage caused by road hazards like glass or nails. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -2962,16 +4025,45 @@ function ThemeProvider({ children }) {
           },
         },
         tireFeature: {
-          s1: { topic: "Heavy Load Support", parag: "Designed for motorcycles that carry heavier loads with ease." },
-          s2: { topic: "Reduced Rolling Resistance", parag: "Optimized to decrease resistance and improve overall efficiency." },
-          s3: { topic: "Comfortable Handling", parag: "Provides stable and predictable handling for long-distance rides." },
-          s4: { topic: "Resilient Tread Compound", parag: "Tire compounds designed to withstand abrasion and harsh conditions." },
-          s5: { topic: "Tire Traction System", parag: "Advanced tread pattern ensures maximum traction on various surfaces." },
+          s1: {
+            topic: "Heavy Load Support",
+            parag:
+              "Designed for motorcycles that carry heavier loads with ease.",
+          },
+          s2: {
+            topic: "Reduced Rolling Resistance",
+            parag:
+              "Optimized to decrease resistance and improve overall efficiency.",
+          },
+          s3: {
+            topic: "Comfortable Handling",
+            parag:
+              "Provides stable and predictable handling for long-distance rides.",
+          },
+          s4: {
+            topic: "Resilient Tread Compound",
+            parag:
+              "Tire compounds designed to withstand abrasion and harsh conditions.",
+          },
+          s5: {
+            topic: "Tire Traction System",
+            parag:
+              "Advanced tread pattern ensures maximum traction on various surfaces.",
+          },
         },
         WarrantiesGuarantees: {
-          p1: { topic: "Defect Warranty", para: "Covers defects in materials or workmanship for the first 12 months." },
-          p2: { topic: "Performance Assurance", para: "Satisfaction guaranteed for up to 30 days after purchase." },
-          p3: { topic: "Road Hazard Protection", para: "Coverage for damage caused by hazards like potholes or road debris. Exclusions apply." },
+          p1: {
+            topic: "Defect Warranty",
+            para: "Covers defects in materials or workmanship for the first 12 months.",
+          },
+          p2: {
+            topic: "Performance Assurance",
+            para: "Satisfaction guaranteed for up to 30 days after purchase.",
+          },
+          p3: {
+            topic: "Road Hazard Protection",
+            para: "Coverage for damage caused by hazards like potholes or road debris. Exclusions apply.",
+          },
         },
         warranty: {
           w1: {
@@ -3011,11 +4103,15 @@ function ThemeProvider({ children }) {
     ],
   };
 
-
   const [Dataset, setDataset] = useState(data);
   const [cartItems, setCartItems] = useState([]);
   const [CartDisplay, setCartDisplay] = useState(false);
+  const [LoginDisplay, setLoginDisplay] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true); // Initial view: Registration
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [IsLogiIn, setIsLogiIn] = useState(false)
 
+  // function is handel cart
   const handleCartToggle = () => {
     setCartDisplay(true);
   };
@@ -3029,9 +4125,147 @@ function ThemeProvider({ children }) {
   };
 
   const removeFromCart = (index) => {
-    setCartItems((prevCartItems) => prevCartItems.filter((_, i) => i !== index));
+    setCartItems((prevCartItems) =>
+      prevCartItems.filter((_, i) => i !== index)
+    );
   };
-  
+  // end
+
+  // function of login
+  const HandelOpenLogin = () => {
+    setLoginDisplay(true);
+  };
+
+  const HandelCloseLogin = () => {
+    window.location.href='/';
+  };
+
+  // Function to toggle between login and registration views
+  const toggleRegistration = () => {
+    setIsRegistrationOpen((prevState) => !prevState);
+  };
+
+  // Local state to manage registration form inputs
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: "",
+    confirmPassword: "",
+  });
+
+  // Handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  // Handle registration form submission
+  const handleRegistrationSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate input fields
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.password ||
+      !formData.confirmPassword
+    ) {
+      alert("All fields are required!");
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    // Get existing users from localStorage
+    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if the email is already registered
+    const isEmailRegistered = existingUsers.some(
+      (user) => user.email === formData.email
+    );
+
+    if (isEmailRegistered) {
+      alert("This email is already registered!");
+      return;
+    }
+
+    // Save the new user to localStorage
+    const newUser = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+    };
+
+    const updatedUsers = [...existingUsers, newUser];
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+    // Reset the form and notify the user
+    setFormData({
+      email: "",
+      password: "",
+      name: "",
+      confirmPassword: "",
+    });
+
+    alert("Registration successful!");
+    // Open login form and close registration form
+    setIsRegistrationOpen(false); // Close the registration form
+    setIsLoginOpen(true); // Open the login form
+  };
+
+ // State to manage login form inputs
+ const [loginData, setLoginData] = useState({
+  email: "",
+  password: "",
+});
+
+// Handle input changes
+const handleInputChangeLogin = (e) => {
+  const { name, value } = e.target;
+  setLoginData((prevState) => ({
+    ...prevState,
+    [name]: value,
+  }));
+};
+
+// Handle login form submission
+const handleLoginSubmit = (e) => {
+  e.preventDefault();
+
+  // Get stored users from localStorage
+  const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Find a user with matching email and password
+  const matchedUser = storedUsers.find(
+    (user) =>
+      user.email === loginData.email && user.password === loginData.password
+  );
+
+  if (matchedUser) {
+    alert("Login successful!");
+    // Optionally, set user data in local storage or context
+    localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
+    // Check Login
+    setIsLoginOpen(true);
+    // Navigate to dashboard or home page
+    window.location.href = "/CheckOut"; // Replace with your routing logic
+  } else {
+    alert("Invalid email or password!");
+  }
+
+  // Reset the form
+  setLoginData({
+    email: "",
+    password: "",
+  });
+};
+
 
   return (
     <ThemeContext.Provider
@@ -3045,11 +4279,23 @@ function ThemeProvider({ children }) {
         setCartItems,
         addToCart,
         removeFromCart,
+        LoginDisplay,
+        HandelOpenLogin,
+        HandelCloseLogin,
+        toggleRegistration,
+        isRegistrationOpen,
+        handleRegistrationSubmit,
+        handleInputChange,
+        formData,
+        loginData,
+        handleInputChangeLogin,
+        handleLoginSubmit,
+        IsLogiIn
       }}
     >
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 export { ThemeContext, ThemeProvider };

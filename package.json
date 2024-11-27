@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
+    "@mui/material": "^6.1.8",
     "formik": "^2.4.6",
     "framer-motion": "^11.11.17",
     "intersection-observer": "^0.12.2",
