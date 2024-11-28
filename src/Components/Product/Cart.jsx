@@ -42,7 +42,7 @@ export default function Cart() {
 
     // Create a simplified version of cart items (only serializable data)
     const serializedCartItems = cartItems.map((item, index) => ({
-      
+      image: item.image,
       name: item.name,
       price: item.price,
       quantity: quantities[index] || 1,
